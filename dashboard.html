@@ -188,14 +188,103 @@ details.sup ul{margin:8px 0 0 18px;display:grid;gap:4px;color:var(--muted)}
 canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;height:100%}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
 
+
+/* Vistas */
+.view[hidden]{display:none!important}
+.view{grid-template-columns:minmax(0,1fr);min-width:0}
+.view>*,.tgrid>*,.focus>*,.stack>*{min-width:0}
+.tform input[type=datetime-local]{min-width:0}
+.app.wide{grid-template-columns:230px minmax(0,1fr)}
+.app.wide .right{display:none}
+.navg a .badge-n{margin-left:auto;background:var(--pink);color:#121212;border-radius:999px;font-size:11px;font-weight:700;padding:1px 7px}
+/* Tareas */
+.tgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:16px;align-items:start}
+.tform{background:var(--blue);border-radius:20px;padding:18px 20px;display:grid;gap:12px;color:#121212;position:relative;overflow:hidden}
+.tform h3{font-family:var(--display);font-weight:500;font-size:21px}
+.tform label{display:grid;gap:5px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.tform input,.tform select{font:inherit;font-size:15px;text-transform:none;letter-spacing:0;font-weight:500;background:rgb(255 255 255 / .75);border:1.5px solid transparent;border-radius:12px;padding:10px 12px;color:#121212;width:100%}
+.tform input:focus,.tform select:focus{outline:none;border-color:#121212}
+.row2f{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.fmt button{background:rgb(255 255 255 / .55);border-radius:12px;padding:9px 6px;font-size:13px;font-weight:600;display:grid;gap:2px;text-align:center}
+.fmt button small{font-size:10.5px;font-weight:500;opacity:.75}
+.fmt button[aria-pressed="true"]{background:#121212;color:#f6f0e2}
+.tears{display:flex;gap:4px;align-items:center}
+.tears button{width:30px;height:30px;display:grid;place-items:center;border-radius:8px}
+.tears button:hover{background:rgb(18 18 18 / .08)}
+.tears svg{width:22px;height:22px}
+.tears .lbl{font-size:12px;margin-left:6px;font-weight:600;text-transform:none;letter-spacing:0}
+.addbtn{background:#121212;color:#f6f0e2;border-radius:999px;padding:12px;font-weight:600}
+.tlist{display:grid;gap:10px}
+.task{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px 16px;display:grid;gap:8px}
+.task.done{opacity:.55}
+.task .th{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.task .th b{font-size:16px;font-weight:600;display:block}
+.task .th small{font-size:12px;color:var(--muted)}
+.urg{border-radius:999px;padding:4px 10px;font-size:11.5px;font-weight:700;white-space:nowrap;color:#121212}
+.urg.u0{background:#f08a8a}.urg.u1{background:var(--pink)}.urg.u2{background:var(--yellow)}.urg.u3{background:var(--green)}.urg.u4{background:var(--chip);color:var(--ink)}
+.task .meta{display:flex;flex-wrap:wrap;gap:6px}
+.task .meta span{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12px}
+.task .when{font-size:13px;line-height:1.45}
+.task .when b{font-weight:600}
+.task .tb{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.task .tears svg{width:24px;height:24px}
+.lnk{font-size:12.5px;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.lnk:hover{color:var(--ink)}
+.cron{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px 18px;display:grid;gap:14px}
+.cron .cday h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:6px}
+.blk{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:center;background:var(--chip);border-radius:14px;padding:9px 12px;margin-bottom:6px}
+.blk .tm{font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.blk b{font-weight:600;font-size:14px;display:block}
+.blk small{font-size:12px;color:var(--muted)}
+.blk.print{background:var(--yellow);color:#121212}.blk.print small{color:#121212;opacity:.75}
+.blk.due{background:#121212;color:#f6f0e2}.blk.due small{color:#cfc9bd}
+.alert{background:#f08a8a;color:#121212;border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.4}
+.empty2{background:var(--chip);border-radius:16px;padding:18px;font-size:14px;color:var(--muted);text-align:center;line-height:1.5}
+.cfg{display:grid;gap:10px;font-size:13px}
+.cfg .r{display:grid;grid-template-columns:110px 1fr 1fr;gap:8px;align-items:center}
+.cfg input{font:inherit;background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:7px 9px;color:var(--ink);width:100%}
+.cfg textarea{font:inherit;font-size:12px;background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:8px;color:var(--ink);width:100%;min-height:70px}
+details.box{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px 16px}
+details.box summary{font-weight:600;cursor:pointer;font-size:14px}
+details.box[open] summary{margin-bottom:10px}
+/* Foco */
+.focus{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.timer{background:var(--pink);border-radius:24px;padding:22px;display:grid;gap:16px;justify-items:center;color:#121212;position:relative;overflow:hidden}
+.modes{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.modes button{border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;background:rgb(255 255 255 / .55)}
+.modes button[aria-pressed="true"]{background:#121212;color:#f6f0e2}
+.dial{width:min(260px,70vw);aspect-ratio:1;position:relative;display:grid;place-items:center}
+.dial svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.dial .big{font-family:var(--display);font-size:clamp(46px,12vw,64px);font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.dial .sub{font-size:13px;opacity:.75;margin-top:-6px}
+.tsel{font:inherit;background:rgb(255 255 255 / .75);border:0;border-radius:12px;padding:10px 12px;width:100%;max-width:340px;color:#121212}
+.tomatoes{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;min-height:22px}
+.tomatoes i{width:18px;height:18px;border-radius:50%;background:#e2483d;position:relative}
+.tomatoes i::after{content:"";position:absolute;top:-3px;left:6px;width:6px;height:5px;background:#5f8f3c;border-radius:2px}
+.now{background:var(--yellow);border-radius:20px;padding:18px 20px;color:#121212;display:grid;gap:8px}
+.now h3,.how h3{font-family:var(--display);font-weight:500;font-size:21px}
+.how{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:8px;font-size:14px;line-height:1.5}
+.how ol{margin-left:18px;display:grid;gap:4px}
+.stack{display:grid;gap:16px}
+@media (max-width:1180px){.app.wide{grid-template-columns:200px minmax(0,1fr)}}
+@media (max-width:820px){
+  .app.wide{grid-template-columns:minmax(0,1fr)}
+  .tgrid,.focus{grid-template-columns:1fr}
+}
 @media (max-width:1180px){
   .app{grid-template-columns:200px minmax(0,1fr)}
   .right{grid-column:2;position:static;grid-template-columns:1fr 1fr;align-items:start}
 }
 @media (max-width:820px){
-  .app{grid-template-columns:1fr;padding:14px;gap:16px}
+  .app{grid-template-columns:minmax(0,1fr);padding:14px;gap:16px}
+  .main{grid-column:1}
   .side{position:static;min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;padding:14px 16px;gap:12px}
-  .side .navg{display:none}
+  .side .navg{order:3;width:100%;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+  .side .navg::-webkit-scrollbar{display:none}
+  .side .navg .lbl{display:none}
+  .side .navg a{background:#262626;border-radius:999px;padding:8px 12px;white-space:nowrap;box-shadow:none}
+  .side .navg a.act{background:var(--pink);color:#121212}
   .side .route{margin:0 0 0 auto;min-width:230px}
   .side .reset{display:none}
   .right{grid-column:1;grid-template-columns:1fr}
@@ -211,11 +300,10 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;heigh
     <div class="logo">carrera<span>.</span></div>
     <nav class="navg" aria-label="Secciones">
       <div class="lbl">General</div>
-      <a href="#inicio" class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Inicio</a>
-      <a href="#cuatris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Cuatrimestres</a>
-      <a href="#finales"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Finales pendientes</a>
-      <a href="#dia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mi día</a>
-      <a href="#supuestos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>Supuestos</a>
+      <a href="#inicio" data-view="inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Inicio</a>
+      <a href="#tareas" data-view="tareas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Tareas<span class="badge-n" id="navCount" hidden></span></a>
+      <a href="#foco" data-view="foco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Modo foco</a>
+      <a href="/" id="gameLink" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15 12h.01M18 12h.01"/></svg>Modo juego</a>
     </nav>
     <div class="route">
       <div class="lbl">Ruta</div>
@@ -227,7 +315,8 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;heigh
     <button class="reset" id="reset">Empezar de nuevo</button>
   </aside>
 
-  <main class="main" id="inicio">
+  <main class="main">
+   <div class="view" id="v-inicio" style="display:grid;gap:22px">
     <div class="top">
       <div class="pills" role="group" aria-label="Elegí el año">Año: <span id="yearPills" style="display:flex;gap:6px"></span></div>
       <div class="icons">
@@ -288,6 +377,98 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;heigh
 
     <details class="sup" id="supuestos"><summary>Supuestos de este plan</summary><ul id="sup"></ul></details>
     <p class="lead" style="font-size:12.5px">Días, horarios y profes según los horarios 2026 de la UNSTA. Pueden cambiar.</p>
+
+   </div>
+
+   <div class="view" id="v-tareas" hidden style="display:grid;gap:20px">
+    <div>
+      <h1>Tareas pendientes</h1>
+      <p class="lead">Cargá cada TP con cuánto te va a llevar y para cuándo es. El cronograma reparte las horas en tu tiempo libre y te avisa cuándo imprimir. <b>Impresión</b>: todo listo un día antes. <b>Digital</b>: 8 horas antes. <b>Ambos</b>: dos días antes.</p>
+    </div>
+    <div class="tgrid">
+      <form class="tform" id="tform" autocomplete="off">
+        <svg class="deco" style="position:absolute;right:-30px;top:-30px;width:140px;pointer-events:none" viewBox="0 0 100 100"><path d="M50 0l9 25 25-12-11 25 27 7-25 12 15 23-27-5-3 27-16-22-16 22-3-27-27 5 15-23L0 45l27-7L16 13l25 12z" fill="var(--blue-d)" opacity=".7"/></svg>
+        <h3 style="position:relative">Nueva tarea</h3>
+        <label for="fMat">Materia<select id="fMat" required></select></label>
+        <label for="fTit">Tarea<input id="fTit" type="text" placeholder="Ej.: TP 3 · afiche tipográfico" required></label>
+        <div class="row2f">
+          <label for="fHrs">Tiempo aprox. (h)<input id="fHrs" type="number" min="0.5" step="0.5" value="4" required></label>
+          <label for="fDue">Entrega<input id="fDue" type="datetime-local" required></label>
+        </div>
+        <label>Detalles
+          <div class="fmt" role="group" aria-label="Formato de entrega" id="fFmt">
+            <button type="button" data-fmt="impresion" aria-pressed="true">Impresión<small>1 día antes</small></button>
+            <button type="button" data-fmt="digital" aria-pressed="false">Digital<small>8 h antes</small></button>
+            <button type="button" data-fmt="ambos" aria-pressed="false">Ambos<small>2 días antes</small></button>
+          </div>
+        </label>
+        <label>Cuánto llevás hecho<div class="tears" id="fTears" role="group" aria-label="Progreso"></div></label>
+        <button class="addbtn" type="submit" id="fSubmit">Agregar tarea</button>
+        <button class="lnk" type="button" id="fCancel" hidden style="justify-self:center">Cancelar edición</button>
+      </form>
+      <div class="stack">
+        <div class="sec-h" style="margin:0"><h2>Mis tareas</h2><span class="drop" id="tCount">0</span></div>
+        <div class="tlist" id="tlist"></div>
+      </div>
+    </div>
+
+    <section class="stack">
+      <div class="sec-h" style="margin:0"><h2>Cronograma automático</h2><span class="drop" id="cronInfo"></span></div>
+      <div class="cron" id="cron"></div>
+      <details class="box"><summary>Mi tiempo libre para hacer tareas</summary>
+        <div class="cfg" id="cfg">
+          <div class="r"><span>Lunes a viernes</span><input type="time" id="cWkF" aria-label="Lunes a viernes desde"><input type="time" id="cWkT" aria-label="Lunes a viernes hasta"></div>
+          <div class="r"><span>Sábado</span><input type="time" id="cSaF" aria-label="Sábado desde"><input type="time" id="cSaT" aria-label="Sábado hasta"></div>
+          <div class="r"><span>Domingo</span><input type="time" id="cSuF" aria-label="Domingo desde"><input type="time" id="cSuT" aria-label="Domingo hasta"></div>
+          <div class="r"><span>Máx. por día</span><input type="number" id="cMax" min="1" max="12" step="0.5" aria-label="Horas máximas por día"><span>horas</span></div>
+          <p class="lead" style="margin:0;font-size:12.5px">Si dejás un día con el mismo horario de inicio y fin, ese día no se usa.</p>
+        </div>
+      </details>
+      <details class="box"><summary>Pasar mis datos al celu o a la compu</summary>
+        <div class="cfg">
+          <p class="lead" style="margin:0;font-size:13px">Lo que cargás queda guardado en este navegador. Para verlo en otro dispositivo, copiá el código acá y pegalo allá.</p>
+          <div class="btnrow"><button class="drop" type="button" id="expBtn">Copiar mi código</button></div>
+          <textarea id="impTxt" placeholder="Pegá acá el código del otro dispositivo" aria-label="Código para importar"></textarea>
+          <div class="btnrow"><button class="drop" type="button" id="impBtn">Cargar código</button></div>
+        </div>
+      </details>
+    </section>
+   </div>
+
+   <div class="view" id="v-foco" hidden style="display:grid;gap:20px">
+    <div>
+      <h1>Modo foco</h1>
+      <p class="lead">Un temporizador pomodoro: 25 minutos de foco en una sola tarea, 5 de pausa, y una pausa larga cada cuatro.</p>
+    </div>
+    <div class="focus">
+      <div class="timer">
+        <svg class="deco" style="position:absolute;left:-30px;bottom:-30px;width:150px;pointer-events:none" viewBox="0 0 100 90"><path d="M50 88S2 58 2 28C2 12 14 2 27 2c10 0 18 6 23 14C55 8 63 2 73 2c13 0 25 10 25 26 0 30-48 60-48 60z" fill="var(--pink-d)" opacity=".6"/></svg>
+        <div class="modes" role="group" aria-label="Tipo de bloque" id="pModes">
+          <button data-pm="foco" aria-pressed="true">Foco 25</button>
+          <button data-pm="pausa" aria-pressed="false">Pausa 5</button>
+          <button data-pm="larga" aria-pressed="false">Pausa larga 15</button>
+        </div>
+        <div class="dial"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgb(18 18 18 / .12)" stroke-width="5"/><circle id="pRing" cx="50" cy="50" r="46" fill="none" stroke="#121212" stroke-width="5" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="0"/></svg><div style="text-align:center;position:relative"><div class="big" id="pTime">25:00</div><div class="sub" id="pSub">Listo para arrancar</div></div></div>
+        <select class="tsel" id="pTask" aria-label="Tarea en la que vas a trabajar"></select>
+        <div class="btnrow" style="width:100%;max-width:340px"><button class="bigbtn" id="pStart">Empezar</button><button class="rbtn" id="pReset" aria-label="Reiniciar el temporizador"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button></div>
+        <div style="text-align:center;font-size:13px"><b id="pCount">0</b> pomodoros hoy</div>
+        <div class="tomatoes" id="pTomatoes" aria-hidden="true"></div>
+      </div>
+      <div class="stack">
+        <div class="now" id="nowCard"></div>
+        <div class="how">
+          <h3>Cómo funciona</h3>
+          <ol>
+            <li>Elegí una sola tarea.</li>
+            <li>Trabajá 25 minutos sin el celu.</li>
+            <li>Cuando suena, 5 minutos de pausa.</li>
+            <li>Cada 4 pomodoros, una pausa larga de 15.</li>
+          </ol>
+          <p style="color:var(--muted);font-size:13px">Cada pomodoro que terminás se suma a la tarea elegida, así ves cuánto le dedicaste.</p>
+        </div>
+      </div>
+    </div>
+   </div>
   </main>
 
   <aside class="right" id="dia">
@@ -321,11 +502,16 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;heigh
   <p class="lead">Se borra lo que marcaste en esta página. El plan no cambia.</p>
   <div class="btnrow"><button class="drop" id="rNo" style="background:var(--chip);color:var(--ink)">Cancelar</button><button class="drop" id="rYes">Sí, reiniciar</button></div>
 </div></div>
+<div class="modal small-modal" id="delModal" role="dialog" aria-modal="true" aria-labelledby="dT"><div class="mbox">
+  <h3 id="dT">¿Borrar esta tarea?</h3>
+  <p class="lead">Se saca de la lista y del cronograma.</p>
+  <div class="btnrow"><button class="drop" id="dNo" style="background:var(--chip);color:var(--ink)">Cancelar</button><button class="drop" id="dYes">Sí, borrar</button></div>
+</div></div>
 <div class="toast" id="toast" role="status"></div>
 <canvas id="fx" aria-hidden="true"></canvas>
 
 <script>
-const D = {"alumna": "Guadalupe Paz Kasiañuk", "carrera": "Lic. en Diseño Multimedial · UNSTA", "subjects": {"101": {"n": "Proyectual I", "y": 1, "d": "anual", "corr": []}, "102": {"n": "Tipografía I", "y": 1, "d": "anual", "corr": []}, "103": {"n": "Morfología I", "y": 1, "d": "anual", "corr": []}, "104": {"n": "Medios I", "y": 1, "d": "anual", "corr": []}, "105": {"n": "Formación Humanística I", "y": 1, "d": "anual", "corr": []}, "10E": {"n": "Espacio Curricular Común I", "y": 1, "d": "anual", "corr": []}, "111": {"n": "Diseño y Comunicación I", "y": 1, "d": "1C", "corr": []}, "121": {"n": "Historia del Arte y el Diseño I", "y": 1, "d": "2C", "corr": []}, "10T": {"n": "TIC 1", "y": 1, "d": "anual", "corr": [], "extra": true}, "107": {"n": "Inglés Nivel I", "y": 1, "d": "anual", "corr": [], "extra": true}, "201": {"n": "Tipografía 2", "y": 2, "d": "anual", "corr": ["102"], "p": "Bumbacher · Ganassin · Rossi Rojo", "h": "Mié 8:00"}, "202": {"n": "Formación Humanística II", "y": 2, "d": "anual", "corr": ["105"], "p": "Chehuan (1C) · Lord (2C)", "h": "Mié ~13:00"}, "211": {"n": "Proyectual 2", "y": 2, "d": "1C", "corr": ["101"], "p": "Ganassin · Guglielmi · Lopera", "h": "Mar 8:00"}, "212": {"n": "Morfología 2", "y": 2, "d": "1C", "corr": ["103"], "p": "Saleme · Veliz · Moreno · Pérez", "h": "Lun 8:00"}, "213": {"n": "Medios 2", "y": 2, "d": "1C", "corr": ["104"]}, "214": {"n": "Diseño y Comunicación 2", "y": 2, "d": "1C", "corr": ["111"]}, "215": {"n": "Espacio Curricular Común 2", "y": 2, "d": "1C", "corr": ["10E"]}, "221": {"n": "Medios 3", "y": 2, "d": "2C", "corr": ["213"], "p": "Argañaráz · Acuña", "h": "Jue 8:00", "sl": {"2C": [[3, "08:00", "10:25", "Argañaráz · Acuña"]]}}, "222": {"n": "Historia del Arte y el Diseño 2", "y": 2, "d": "2C", "corr": ["121"], "p": "Argañaráz", "h": "Vie 8:00"}, "223": {"n": "Diseño Multimedial 1", "y": 2, "d": "2C", "corr": ["211"], "p": "Aráoz · Manzur", "h": "Jue ~10:30", "sl": {"2C": [[3, "10:30", "13:45", "Aráoz · Manzur"]]}}, "224": {"n": "Programación Multimedial 1", "y": 2, "d": "2C", "corr": ["101"], "p": "Briz · Pepe", "h": "Lun 8:00", "sl": {"2C": [[0, "08:00", "09:35", "Briz · Pepe"]]}}, "20T": {"n": "TIC 2", "y": 2, "d": "anual", "corr": ["10T"], "extra": true, "p": "Collado · Sorroza", "h": "Virtual"}, "207": {"n": "Inglés Nivel II", "y": 2, "d": "anual", "corr": ["107"], "extra": true, "p": "Dpto. de Idiomas", "h": "A confirmar"}, "301": {"n": "Tipografía 3", "y": 3, "d": "anual", "corr": ["201"], "p": "Fontdevila · Di Lullo", "h": "Mié 8:00", "sl": {"1C": [[2, "08:00", "11:15", "Fontdevila · Di Lullo"]], "2C": [[2, "08:00", "11:15", "Fontdevila · Di Lullo"]]}}, "302": {"n": "Formación Humanística III", "y": 3, "d": "anual", "corr": ["202"], "p": "Fray Guillermo Juárez", "h": "Lun ~12:15", "sl": {"1C": [[0, "12:15", "13:45", "Fray G. Juárez"]], "2C": [[0, "12:15", "13:45", "Fray G. Juárez"]]}}, "303": {"n": "Diseño Multimedial 2", "y": 3, "d": "anual", "corr": ["214", "223"], "p": "Briz · Frontini Arnedo · Eguiazabal / Zaragoza", "h": "Mar 8:00 (1C) · Vie 8:00 (2C)", "sl": {"1C": [[1, "08:00", "11:15", "Briz · Frontini Arnedo · Eguiazabal"]], "2C": [[4, "08:00", "11:15", "Briz · Frontini Arnedo · Zaragoza"]]}}, "311": {"n": "Medios 4", "y": 3, "d": "2C", "corr": ["221"], "p": "Rodríguez  ó  Sanchis · Mauro", "h": "Mar 8:00 ó Mar ~11:20", "sl": {"2C": [[1, "08:00", "11:15", "Rodríguez"], [1, "11:20", "14:35", "Sanchis · Mauro"]]}}, "312": {"n": "Programación Multimedial 2", "y": 3, "d": "1C", "corr": ["224"], "p": "Pepe · Singh", "h": "Jue 8:00 ó ~11:20", "sl": {"1C": [[3, "08:00", "11:15", "Pepe · Singh (com. A)"], [3, "11:20", "14:35", "Pepe · Singh (com. B)"]]}}, "313": {"n": "Espacio Curricular Común 3", "y": 3, "d": "1C", "corr": ["215"], "p": "Robinson", "h": "Mié ~13:00", "sl": {"1C": [[2, "13:00", "14:35", "Robinson"]]}}, "321": {"n": "Diseño y Comunicación 3", "y": 3, "d": "2C", "corr": ["214"], "p": "Pera · Nadra · Saleme", "h": "Lun ~9:40"}, "322": {"n": "Programación Multimedial 3", "y": 3, "d": "2C", "corr": ["224"], "p": "Pepe", "h": "Jue ~11:20", "sl": {"2C": [[3, "11:20", "14:35", "Pepe"]]}}, "323": {"n": "Animación Digital 1", "y": 3, "d": "2C", "corr": ["221"], "p": "Sanchis · Budeguer  ó  Rodríguez · González Delgado", "h": "Mié ~11:20 ó Jue 8:00", "sl": {"2C": [[2, "11:20", "14:35", "Sanchis · Budeguer"], [3, "08:00", "11:15", "Rodríguez · González Delgado"]]}}, "30T": {"n": "TIC 3", "y": 3, "d": "anual", "corr": ["20T"], "extra": true, "p": "Collado · Sorroza", "h": "Lun 8:00 (1C también ~10:30)", "sl": {"1C": [[0, "08:00", "09:35", "Collado · Sorroza"]], "2C": [[0, "08:00", "09:35", "Collado · Sorroza"]]}}, "401": {"n": "Formación Humanística IV", "y": 4, "d": "anual", "corr": ["302"], "p": "P. Zazano", "h": "Lun 9:00 · virtual", "sl": {"1C": [[0, "09:00", "10:25", "P. Zazano · virtual"]], "2C": [[0, "09:00", "10:25", "P. Zazano · virtual"]]}}, "402": {"n": "Medios Audiovisuales", "y": 4, "d": "anual", "corr": ["311"], "p": "Battich · Fajardo  ó  Mauro · Sánchez", "h": "Mié 8:00 ó ~11:20", "sl": {"1C": [[2, "08:00", "11:15", "Battich · Fajardo"], [2, "11:20", "14:35", "Mauro · Sánchez"]], "2C": [[2, "08:00", "10:15", "Battich · Fajardo"]]}}, "412": {"n": "Marketing", "y": 4, "d": "1C", "corr": ["311"], "p": "Martin · Luft · Sánchez Lizárraga", "h": "Jue 8:00", "sl": {"1C": [[3, "08:00", "10:25", "Martin · Luft · Sánchez Lizárraga"]]}}, "413": {"n": "Animación Digital 2", "y": 4, "d": "1C", "corr": ["323"], "p": "Rodríguez · González Delgado  ó  Sanchis · Mauro", "h": "Mar 8:00 ó Jue ~10:30", "sl": {"1C": [[1, "08:00", "11:15", "Rodríguez · González Delgado (com. A)"], [3, "10:30", "13:45", "Sanchis · Mauro (com. B)"]]}}, "414": {"n": "Diseño y Comunicación 4", "y": 4, "d": "1C", "corr": ["321"], "p": "Luft · Nasrallah", "h": "Lun ~10:30 · virtual", "sl": {"1C": [[0, "10:30", "12:05", "Luft · Nasrallah · virtual"]]}}, "421": {"n": "Publicidad", "y": 4, "d": "2C", "corr": ["412"], "p": "Martin · Luft", "h": "Jue 8:00", "sl": {"2C": [[3, "08:00", "10:25", "Martin · Luft"]]}}, "422": {"n": "Espacio Curricular Común 4", "y": 4, "d": "2C", "corr": ["313"], "p": "Luft · Nasrallah", "h": "Lun ~10:30 · virtual", "sl": {"2C": [[0, "10:30", "12:05", "Luft · Nasrallah · virtual"]]}}, "423": {"n": "Diseño de Interfaces Complejas", "y": 4, "d": "2C", "corr": ["303", "311"], "p": "Aráoz · Manzur", "h": "Mar 8:00", "sl": {"2C": [[1, "08:00", "11:15", "Aráoz · Manzur"]]}}, "403": {"n": "Proyecto Final", "y": 4, "d": "anual", "corr": ["301", "302", "303", "311", "312", "313", "321", "322", "323", "412", "413", "414", "401", "402", "421", "422", "423", "207", "30T"], "p": "Rodríguez · González Delgado", "h": "Vie 8:00", "pf": true, "sl": {"1C": [[4, "08:00", "11:15", "Rodríguez · González Delgado"]], "2C": [[4, "08:00", "11:15", "Rodríguez · González Delgado"]]}}}, "estado2026": {"aprobada": ["101", "102", "103", "104", "105", "10E", "111", "121", "10T", "213", "214", "215"], "regular": ["201", "202", "211", "212", "222", "321", "20T", "107", "224"], "libre": ["221"], "cursando": []}, "finalesPendientes": [{"c": "211", "por": "Destraba Diseño Multimedial 1. Tiene que estar aprobada antes de julio de 2027 como muy tarde."}, {"c": "224", "por": "Destraba Programación Multimedial 2 (1.er cuatri 2027) y Programación Multimedial 3."}, {"c": "201", "por": "Destraba Tipografía 3, que arranca en marzo."}, {"c": "202", "por": "Destraba Formación Humanística III, que arranca en marzo."}, {"c": "321", "por": "Destraba Diseño y Comunicación 4, que se cursa en el 1.er cuatrimestre."}, {"c": "20T", "por": "Destraba TIC 3."}, {"c": "107", "por": "Destraba Inglés II, que es requisito para el Proyecto Final."}, {"c": "212", "por": "No destraba ninguna materia, pero la necesitás para recibirte."}, {"c": "222", "por": "No destraba ninguna materia, pero la necesitás para recibirte."}], "planes": {"A": {"nombre": "Ruta normal", "sub": "Sin cursar ninguna materia de forma condicional", "recibida": "Entre diciembre de 2029 y marzo de 2030", "recibidaCorta": "fin 2029", "anios": [{"a": 2027, "anual": ["301", "302", "30T", "207"], "c1": ["313", "414", "312"], "c2": ["221", "223", "422"]}, {"a": 2028, "anual": ["303", "401"], "c1": [], "c2": ["311", "323", "322"]}, {"a": 2029, "anual": ["402", "403"], "c1": ["412", "413"], "c2": ["421", "423"]}], "cond": {}, "choques": [{"cuando": "2027 · 2.º cuatri · jueves 11:20", "que": "Programación Multimedial 3 se superpondría con Diseño Multimedial 1.", "salida": "Por eso queda para el 2.º cuatri de 2028."}], "com": {}}, "B": {"nombre": "Ruta condicional", "sub": "Con 4 materias condicionales en 2027", "recibida": "Entre diciembre de 2028 y marzo de 2029", "recibidaCorta": "fin 2028", "anios": [{"a": 2027, "anual": ["301", "302", "30T", "207", "303"], "c1": ["313", "414", "312"], "c2": ["221", "223", "311", "323", "422", "423"]}, {"a": 2028, "anual": ["401", "402", "403"], "c1": ["412", "413"], "c2": ["322", "421"]}], "cond": {"311": "la rendís después de Medios 3.", "323": "la rendís después de Medios 3.", "303": "la cursás junto con DM1 y la rendís después.", "423": "la cursás junto con DM2 y Medios 4, y la rendís después."}, "choques": [{"cuando": "2027 · 2.º cuatri · jueves 11:20", "que": "Programación Multimedial 3 se superpondría con Diseño Multimedial 1.", "salida": "Por eso queda para el 2.º cuatri de 2028."}, {"cuando": "2027 · 2.º cuatri · martes 8:00", "que": "Diseño de Interfaces coincide con Medios 4 de las 8:00.", "salida": "Elegí Medios 4 con Sanchis · Mauro (~11:20)."}, {"cuando": "2027 · 2.º cuatri · jueves 8:00", "que": "Medios 3 coincide con Animación Digital 1 de los jueves.", "salida": "Anotate en la de los miércoles (~11:20)."}], "com": {"311": 1}}}, "supuestos": ["Las materias con «I» (Tipografía 2, F. Humanística II, Historia 2, DyC 3, TIC 2 e Inglés I) quedan regulares y las aprobás en las mesas de diciembre de 2026 o febrero/marzo de 2027.", "Medios 3 queda libre y la recursás en 2027. Programación Multimedial 1 quedó regular: aprobás el final en diciembre o febrero y cursás Programación Multimedial 2 en el 1.er cuatrimestre de 2027. Programación Multimedial 3 queda para 2028, porque en 2027 se superpone con Diseño Multimedial 1 los jueves.", "Proyectual 2 y Morfología 2 (con «V» en el sistema) están regulares con el final pendiente. Si la «V» quiere decir que se venció la regularidad, hay que recursarlas y el plan cambia.", "Para cursar una materia hace falta tener aprobadas sus correlativas. El Proyecto Final se cursa en paralelo con las últimas materias y se defiende cuando tenés todo aprobado.", "Los días, horarios y profesores son los de 2026 y pueden cambiar en 2027."]};
+const D = {"alumna": "Guadalupe Paz Kasiañuk", "carrera": "Lic. en Diseño Multimedial · UNSTA", "subjects": {"101": {"n": "Proyectual I", "y": 1, "d": "anual", "corr": []}, "102": {"n": "Tipografía I", "y": 1, "d": "anual", "corr": []}, "103": {"n": "Morfología I", "y": 1, "d": "anual", "corr": []}, "104": {"n": "Medios I", "y": 1, "d": "anual", "corr": []}, "105": {"n": "Formación Humanística I", "y": 1, "d": "anual", "corr": []}, "10E": {"n": "Espacio Curricular Común I", "y": 1, "d": "anual", "corr": []}, "111": {"n": "Diseño y Comunicación I", "y": 1, "d": "1C", "corr": []}, "121": {"n": "Historia del Arte y el Diseño I", "y": 1, "d": "2C", "corr": []}, "10T": {"n": "TIC 1", "y": 1, "d": "anual", "corr": [], "extra": true}, "107": {"n": "Inglés Nivel I", "y": 1, "d": "anual", "corr": [], "extra": true}, "201": {"n": "Tipografía 2", "y": 2, "d": "anual", "corr": ["102"], "p": "Bumbacher · Ganassin · Rossi Rojo", "h": "Mié 8:00"}, "202": {"n": "Formación Humanística II", "y": 2, "d": "anual", "corr": ["105"], "p": "Chehuan (1C) · Lord (2C)", "h": "Mié ~13:00"}, "211": {"n": "Proyectual 2", "y": 2, "d": "1C", "corr": ["101"], "p": "Ganassin · Guglielmi · Lopera", "h": "Mar 8:00"}, "212": {"n": "Morfología 2", "y": 2, "d": "1C", "corr": ["103"], "p": "Saleme · Veliz · Moreno · Pérez", "h": "Lun 8:00"}, "213": {"n": "Medios 2", "y": 2, "d": "1C", "corr": ["104"]}, "214": {"n": "Diseño y Comunicación 2", "y": 2, "d": "1C", "corr": ["111"]}, "215": {"n": "Espacio Curricular Común 2", "y": 2, "d": "1C", "corr": ["10E"]}, "221": {"n": "Medios 3", "y": 2, "d": "2C", "corr": ["213"], "p": "Argañaráz · Acuña", "h": "Jue 8:00", "sl": {"2C": [[3, "08:00", "10:25", "Argañaráz · Acuña"]]}}, "222": {"n": "Historia del Arte y el Diseño 2", "y": 2, "d": "2C", "corr": ["121"], "p": "Argañaráz", "h": "Vie 8:00"}, "223": {"n": "Diseño Multimedial 1", "y": 2, "d": "2C", "corr": ["211"], "p": "Aráoz · Manzur", "h": "Jue ~10:30", "sl": {"2C": [[3, "10:30", "13:45", "Aráoz · Manzur"]]}}, "224": {"n": "Programación Multimedial 1", "y": 2, "d": "2C", "corr": ["101"], "p": "Briz · Pepe", "h": "Lun 8:00", "sl": {"2C": [[0, "08:00", "09:35", "Briz · Pepe"]]}}, "20T": {"n": "TIC 2", "y": 2, "d": "anual", "corr": ["10T"], "extra": true, "p": "Collado · Sorroza", "h": "Virtual"}, "207": {"n": "Inglés Nivel II", "y": 2, "d": "anual", "corr": ["107"], "extra": true, "p": "Dpto. de Idiomas", "h": "A confirmar"}, "301": {"n": "Tipografía 3", "y": 3, "d": "anual", "corr": ["201"], "p": "Fontdevila · Di Lullo", "h": "Mié 8:00", "sl": {"1C": [[2, "08:00", "11:15", "Fontdevila · Di Lullo"]], "2C": [[2, "08:00", "11:15", "Fontdevila · Di Lullo"]]}}, "302": {"n": "Formación Humanística III", "y": 3, "d": "anual", "corr": ["202"], "p": "Fray Guillermo Juárez", "h": "Lun ~12:15", "sl": {"1C": [[0, "12:15", "13:45", "Fray G. Juárez"]], "2C": [[0, "12:15", "13:45", "Fray G. Juárez"]]}}, "303": {"n": "Diseño Multimedial 2", "y": 3, "d": "anual", "corr": ["214", "223"], "p": "Briz · Frontini Arnedo · Eguiazabal / Zaragoza", "h": "Mar 8:00 (1C) · Vie 8:00 (2C)", "sl": {"1C": [[1, "08:00", "11:15", "Briz · Frontini Arnedo · Eguiazabal"]], "2C": [[4, "08:00", "11:15", "Briz · Frontini Arnedo · Zaragoza"]]}}, "311": {"n": "Medios 4", "y": 3, "d": "2C", "corr": ["221"], "p": "Rodríguez  ó  Sanchis · Mauro", "h": "Mar 8:00 ó Mar ~11:20", "sl": {"2C": [[1, "08:00", "11:15", "Rodríguez"], [1, "11:20", "14:35", "Sanchis · Mauro"]]}}, "312": {"n": "Programación Multimedial 2", "y": 3, "d": "1C", "corr": ["224"], "p": "Pepe · Singh", "h": "Jue 8:00 ó ~11:20", "sl": {"1C": [[3, "08:00", "11:15", "Pepe · Singh (com. A)"], [3, "11:20", "14:35", "Pepe · Singh (com. B)"]]}}, "313": {"n": "Espacio Curricular Común 3", "y": 3, "d": "1C", "corr": ["215"], "p": "Robinson", "h": "Mié ~13:00", "sl": {"1C": [[2, "13:00", "14:35", "Robinson"]]}}, "321": {"n": "Diseño y Comunicación 3", "y": 3, "d": "2C", "corr": ["214"], "p": "Pera · Nadra · Saleme", "h": "Lun ~9:40", "sl": {"2C": [[0, "09:40", "12:05", "Pera · Nadra · Saleme"]]}}, "322": {"n": "Programación Multimedial 3", "y": 3, "d": "2C", "corr": ["224"], "p": "Pepe", "h": "Jue ~11:20", "sl": {"2C": [[3, "11:20", "14:35", "Pepe"]]}}, "323": {"n": "Animación Digital 1", "y": 3, "d": "2C", "corr": ["221"], "p": "Sanchis · Budeguer  ó  Rodríguez · González Delgado", "h": "Mié ~11:20 ó Jue 8:00", "sl": {"2C": [[2, "11:20", "14:35", "Sanchis · Budeguer"], [3, "08:00", "11:15", "Rodríguez · González Delgado"]]}}, "30T": {"n": "TIC 3", "y": 3, "d": "anual", "corr": ["20T"], "extra": true, "p": "Collado · Sorroza", "h": "Lun 8:00 (1C también ~10:30)", "sl": {"1C": [[0, "08:00", "09:35", "Collado · Sorroza"]], "2C": [[0, "08:00", "09:35", "Collado · Sorroza"]]}}, "401": {"n": "Formación Humanística IV", "y": 4, "d": "anual", "corr": ["302"], "p": "P. Zazano", "h": "Lun 9:00 · virtual", "sl": {"1C": [[0, "09:00", "10:25", "P. Zazano · virtual"]], "2C": [[0, "09:00", "10:25", "P. Zazano · virtual"]]}}, "402": {"n": "Medios Audiovisuales", "y": 4, "d": "anual", "corr": ["311"], "p": "Battich · Fajardo  ó  Mauro · Sánchez", "h": "Mié 8:00 ó ~11:20", "sl": {"1C": [[2, "08:00", "11:15", "Battich · Fajardo"], [2, "11:20", "14:35", "Mauro · Sánchez"]], "2C": [[2, "08:00", "10:15", "Battich · Fajardo"]]}}, "412": {"n": "Marketing", "y": 4, "d": "1C", "corr": ["311"], "p": "Martin · Luft · Sánchez Lizárraga", "h": "Jue 8:00", "sl": {"1C": [[3, "08:00", "10:25", "Martin · Luft · Sánchez Lizárraga"]]}}, "413": {"n": "Animación Digital 2", "y": 4, "d": "1C", "corr": ["323"], "p": "Rodríguez · González Delgado  ó  Sanchis · Mauro", "h": "Mar 8:00 ó Jue ~10:30", "sl": {"1C": [[1, "08:00", "11:15", "Rodríguez · González Delgado (com. A)"], [3, "10:30", "13:45", "Sanchis · Mauro (com. B)"]]}}, "414": {"n": "Diseño y Comunicación 4", "y": 4, "d": "1C", "corr": ["321"], "p": "Luft · Nasrallah", "h": "Lun ~10:30 · virtual", "sl": {"1C": [[0, "10:30", "12:05", "Luft · Nasrallah · virtual"]]}}, "421": {"n": "Publicidad", "y": 4, "d": "2C", "corr": ["412"], "p": "Martin · Luft", "h": "Jue 8:00", "sl": {"2C": [[3, "08:00", "10:25", "Martin · Luft"]]}}, "422": {"n": "Espacio Curricular Común 4", "y": 4, "d": "2C", "corr": ["313"], "p": "Luft · Nasrallah", "h": "Lun ~10:30 · virtual", "sl": {"2C": [[0, "10:30", "12:05", "Luft · Nasrallah · virtual"]]}}, "423": {"n": "Diseño de Interfaces Complejas", "y": 4, "d": "2C", "corr": ["303", "311"], "p": "Aráoz · Manzur", "h": "Mar 8:00", "sl": {"2C": [[1, "08:00", "11:15", "Aráoz · Manzur"]]}}, "403": {"n": "Proyecto Final", "y": 4, "d": "anual", "corr": ["301", "302", "303", "311", "312", "313", "321", "322", "323", "412", "413", "414", "401", "402", "421", "422", "423", "207", "30T"], "p": "Rodríguez · González Delgado", "h": "Vie 8:00", "pf": true, "sl": {"1C": [[4, "08:00", "11:15", "Rodríguez · González Delgado"]], "2C": [[4, "08:00", "11:15", "Rodríguez · González Delgado"]]}}}, "estado2026": {"aprobada": ["101", "102", "103", "104", "105", "10E", "111", "121", "10T", "213", "214", "215"], "regular": ["201", "202", "211", "212", "222", "20T", "107", "224"], "libre": ["221", "321"], "cursando": []}, "finalesPendientes": [{"c": "211", "por": "Destraba Diseño Multimedial 1. Tiene que estar aprobada antes de julio de 2027 como muy tarde."}, {"c": "224", "por": "Destraba Programación Multimedial 2 (1.er cuatri 2027) y Programación Multimedial 3."}, {"c": "201", "por": "Destraba Tipografía 3, que arranca en marzo."}, {"c": "202", "por": "Destraba Formación Humanística III, que arranca en marzo."}, {"c": "20T", "por": "Destraba TIC 3."}, {"c": "107", "por": "Destraba Inglés II, que es requisito para el Proyecto Final."}, {"c": "212", "por": "No destraba ninguna materia, pero la necesitás para recibirte."}, {"c": "222", "por": "No destraba ninguna materia, pero la necesitás para recibirte."}], "planes": {"A": {"nombre": "Ruta normal", "sub": "Sin cursar ninguna materia de forma condicional", "recibida": "Entre diciembre de 2029 y marzo de 2030", "recibidaCorta": "fin 2029", "anios": [{"a": 2027, "anual": ["301", "302", "30T", "207"], "c1": ["313", "312"], "c2": ["221", "223", "321", "422"]}, {"a": 2028, "anual": ["303", "401"], "c1": ["414"], "c2": ["311", "323", "322"]}, {"a": 2029, "anual": ["402", "403"], "c1": ["412", "413"], "c2": ["421", "423"]}], "cond": {}, "choques": [{"cuando": "2027 · 2.º cuatri · lunes 10:30", "que": "Diseño y Comunicación 3 (9:40–12:05) se superpone con Espacio Curricular Común 4 (virtual, 10:30–12:05).", "salida": "Consultá si podés hacer ECC 4 en otro horario."}, {"cuando": "2027 · 2.º cuatri · jueves 11:20", "que": "Programación Multimedial 3 se superpondría con Diseño Multimedial 1.", "salida": "Por eso queda para el 2.º cuatri de 2028."}], "com": {}}, "B": {"nombre": "Ruta condicional", "sub": "Con 4 materias condicionales en 2027", "recibida": "Entre diciembre de 2028 y marzo de 2029", "recibidaCorta": "fin 2028", "anios": [{"a": 2027, "anual": ["301", "302", "30T", "207", "303"], "c1": ["313", "312"], "c2": ["221", "223", "321", "311", "323", "422", "423"]}, {"a": 2028, "anual": ["401", "402", "403"], "c1": ["414", "412", "413"], "c2": ["322", "421"]}], "cond": {"311": "la rendís después de Medios 3.", "323": "la rendís después de Medios 3.", "303": "la cursás junto con DM1 y la rendís después.", "423": "la cursás junto con DM2 y Medios 4, y la rendís después."}, "choques": [{"cuando": "2027 · 2.º cuatri · lunes 10:30", "que": "Diseño y Comunicación 3 (9:40–12:05) se superpone con Espacio Curricular Común 4 (virtual, 10:30–12:05).", "salida": "Consultá si podés hacer ECC 4 en otro horario."}, {"cuando": "2027 · 2.º cuatri · jueves 11:20", "que": "Programación Multimedial 3 se superpondría con Diseño Multimedial 1.", "salida": "Por eso queda para el 2.º cuatri de 2028."}, {"cuando": "2027 · 2.º cuatri · martes 8:00", "que": "Diseño de Interfaces coincide con Medios 4 de las 8:00.", "salida": "Elegí Medios 4 con Sanchis · Mauro (~11:20)."}, {"cuando": "2027 · 2.º cuatri · jueves 8:00", "que": "Medios 3 coincide con Animación Digital 1 de los jueves.", "salida": "Anotate en la de los miércoles (~11:20)."}], "com": {"311": 1}}}, "supuestos": ["Las materias con «I» (Tipografía 2, F. Humanística II, Historia 2, TIC 2 e Inglés I) quedan regulares y las aprobás en las mesas de diciembre de 2026 o febrero/marzo de 2027.", "Medios 3 queda libre y la recursás en 2027. Programación Multimedial 1 quedó regular: aprobás el final en diciembre o febrero y cursás Programación Multimedial 2 en el 1.er cuatrimestre de 2027. Programación Multimedial 3 queda para 2028, porque en 2027 se superpone con Diseño Multimedial 1 los jueves.", "Diseño y Comunicación 3 la cursás en el 2.º cuatrimestre de 2027, así que Diseño y Comunicación 4 pasa al 1.er cuatrimestre de 2028.", "Proyectual 2 y Morfología 2 (con «V» en el sistema) están regulares con el final pendiente. Si la «V» quiere decir que se venció la regularidad, hay que recursarlas y el plan cambia.", "Para cursar una materia hace falta tener aprobadas sus correlativas. El Proyecto Final se cursa en paralelo con las últimas materias y se defiende cuando tenés todo aprobado.", "Los días, horarios y profesores son los de 2026 y pueden cambiar en 2027."]};
 const S = D.subjects;
 const ST = ["Pendiente","Cursando","Regular","Aprobada"];
 const KEY = "guada-modo-carrera-v3";
@@ -411,7 +597,7 @@ function render(){
   let dh=`<div class="hd"><div><b>${lv.a} · ${lv.name}</b><small>${esc(plan.nombre)} · ${codes.length} materias</small></div><span class="tag">NIVEL ${state.lv+1}</span></div>`;
   dh+=`<div class="tags">${yrs.map(([y,k])=>`<span class="t">${k} de ${y}.º año</span>`).join("")}${codes.some(c=>plan.cond[c])?`<span class="t">${codes.filter(c=>plan.cond[c]).length} condicional${codes.filter(c=>plan.cond[c]).length>1?"es":""}</span>`:""}</div>`;
   dh+=`<div class="subj">`+lv.items.map(([c,cont])=>{const s=S[c],st=state.st[c],cond=plan.cond[c],miss=st<3?missing(c,plan):[];
-    return `<button class="sj${st===3?" done":""}" data-c="${c}" aria-label="${esc(s.n)}: ${ST[st]}. Tocá para cambiar."><span class="n">${esc(s.n)}</span><span class="st s${st}"><i></i>${ST[st]}</span><span class="m">${esc(s.p||"")}${s.h?` · ${esc(s.h)}`:""}${cont?" · anual, sigue":s.d==="anual"?" · anual":""}</span>${cond?`<span class="cd"><b>CONDICIONAL</b>${esc(cond)}</span>`:""}${D.estado2026.libre.includes(c)&&st===0?`<span class="cd">En 2026 quedaste libre: la recursás.</span>`:""}${s.pf&&st<3?`<span class="cd">La defendés cuando tengas todo aprobado.</span>`:""}${miss.length?`<span class="lk">Bloqueada: te falta ${miss.map(x=>esc(S[x].n)).join(", ")}</span>`:""}</button>`;}).join("")+`</div>`;
+    return `<button class="sj${st===3?" done":""}" data-c="${c}" aria-label="${esc(s.n)}: ${ST[st]}. Tocá para cambiar."><span class="n">${esc(s.n)}</span><span class="st s${st}"><i></i>${ST[st]}</span><span class="m">${esc(s.p||"")}${s.h?` · ${esc(s.h)}`:""}${cont?" · anual, sigue":s.d==="anual"?" · anual":""}</span>${cond?`<span class="cd"><b>CONDICIONAL</b>${esc(cond)}</span>`:""}${D.estado2026.libre.includes(c)&&st===0?`<span class="cd">La recursás en 2027.</span>`:""}${s.pf&&st<3?`<span class="cd">La defendés cuando tengas todo aprobado.</span>`:""}${miss.length?`<span class="lk">Bloqueada: te falta ${miss.map(x=>esc(S[x].n)).join(", ")}</span>`:""}</button>`;}).join("")+`</div>`;
   plan.choques.filter(ch=>ch.cuando.startsWith(lv.key)).forEach(ch=>{dh+=`<div class="warn"><b>Ojo · ${esc(ch.cuando.split("·").pop().trim())}</b><br>${esc(ch.que)} ${esc(ch.salida)}</div>`;});
   document.getElementById("detail").innerHTML=dh;
 
@@ -445,6 +631,162 @@ function renderWeek(plan,lv,evs,off){
   document.getElementById("wkOff").textContent=off.length?`Sin horario fijo: ${off.join(", ")} (lo define el Dpto. de Idiomas).`:"";
 }
 
+
+/* ===== Vistas ===== */
+const VIEWS=["inicio","tareas","foco"];
+let view="inicio";
+function setView(v,push){if(!VIEWS.includes(v))v="inicio";view=v;
+  VIEWS.forEach(x=>{const el=document.getElementById("v-"+x);el.hidden=x!==v;});
+  document.querySelector(".app").classList.toggle("wide",v!=="inicio");
+  document.querySelectorAll(".navg [data-view]").forEach(a=>a.classList.toggle("act",a.dataset.view===v));
+  if(push)history.replaceState(null,"","#"+v);
+  if(v==="tareas")renderTasks();if(v==="foco")renderFocus();window.scrollTo(0,0);}
+document.querySelectorAll(".navg [data-view]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();setView(a.dataset.view,true);}));
+if(/vercel\.app$/.test(location.hostname)){const g=document.getElementById("gameLink");g.hidden=false;}
+
+/* ===== Tareas ===== */
+const TK=KEY+"-tareas", CK=KEY+"-cfg", PK=KEY+"-pomo";
+const load=(k,d)=>{try{const r=localStorage.getItem(k);return r?JSON.parse(r):d}catch(e){return d}};
+const store=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let tasks=load(TK,[]);
+let cfg=Object.assign({wkF:"17:00",wkT:"22:00",saF:"10:00",saT:"19:00",suF:"11:00",suT:"18:00",max:4},load(CK,{}));
+const FMT={impresion:{n:"Impresión",h:24,why:"un día antes, para imprimir"},digital:{n:"Digital",h:8,why:"8 horas antes"},ambos:{n:"Ambos",h:48,why:"dos días antes, para imprimir y subir"}};
+const TEARLBL=["Sin empezar","Arranqué","Un cuarto","A la mitad","Casi","¡Terminado!"];
+const tearSVG=on=>`<svg viewBox="0 0 24 24"><path d="M12 2.5S5 10.6 5 15.2a7 7 0 0 0 14 0C19 10.6 12 2.5 12 2.5z" fill="${on?"#4f7fd9":"none"}" stroke="${on?"#2c5bb5":"currentColor"}" stroke-width="1.7"/>${on?'<path d="M9 15.5a3 3 0 0 0 2.2 2.8" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".8"/>':""}</svg>`;
+function tearsHTML(n,attr){let h="";for(let i=1;i<=5;i++)h+=`<button type="button" ${attr}="${i}" aria-label="${i} de 5: ${TEARLBL[i]}" aria-pressed="${i<=n}">${tearSVG(i<=n)}</button>`;return h+`<span class="lbl">${TEARLBL[n]}</span>`;}
+let fmtSel="impresion", fTear=0, editing=null;
+const pad=n=>String(n).padStart(2,"0");
+const DN=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+const fmtDay=d=>`${DN[d.getDay()].slice(0,3).toLowerCase()} ${d.getDate()}/${d.getMonth()+1}`;
+const fmtHM=d=>`${pad(d.getHours())}:${pad(d.getMinutes())}`;
+const fmtH=h=>{h=Math.round(h*2)/2;return (Number.isInteger(h)?h:h.toFixed(1).replace(".",","))+" h";};
+function listo(t){return new Date(new Date(t.due).getTime()-FMT[t.fmt].h*3600e3);}
+function remaining(t){return Math.max(0,Math.ceil(t.hrs*(1-t.prog/5)*2)/2);}
+function urgency(t){const now=Date.now(),l=listo(t).getTime(),d=(l-now)/86400e3;
+  if(t.prog>=5)return[4,"Listo"];if(l<now)return[0,"¡Vencido el plazo!"];if(d<1)return[0,"Urgente · hoy"];if(d<2)return[1,"Para mañana"];if(d<5)return[2,"Esta semana"];return[3,"Tranqui"];}
+function matName(c){return c==="otra"?"Otra":(S[c]?S[c].n:c);}
+
+function fillMat(){const sel=document.getElementById("fMat");const cur=sel.value;
+  const groups={2:[],3:[],4:[]};Object.keys(S).forEach(c=>{const s=S[c];if(s.y>=2&&state.st[c]<3)groups[s.y].push(c);});
+  sel.innerHTML=[2,3,4].map(y=>`<optgroup label="${y}.º año">${groups[y].sort((a,b)=>S[a].n.localeCompare(S[b].n)).map(c=>`<option value="${c}">${esc(S[c].n)}</option>`).join("")}</optgroup>`).join("")+`<option value="otra">Otra</option>`;
+  if(cur)sel.value=cur;}
+function resetForm(){editing=null;document.getElementById("tform").reset();fmtSel="impresion";fTear=0;
+  const d=new Date(Date.now()+3*86400e3);d.setHours(10,0,0,0);document.getElementById("fDue").value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T10:00`;
+  document.getElementById("fHrs").value=4;document.getElementById("fSubmit").textContent="Agregar tarea";document.getElementById("fCancel").hidden=true;paintForm();}
+function paintForm(){document.querySelectorAll("#fFmt [data-fmt]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.fmt===fmtSel));
+  document.getElementById("fTears").innerHTML=tearsHTML(fTear,"data-ft");}
+
+/* Cronograma: reparte las horas en el tiempo libre, primero lo que vence antes */
+function windowFor(d){const g=d.getDay();const k=g===0?"su":g===6?"sa":"wk";const a=cfg[k+"F"],b=cfg[k+"T"];if(!a||!b||a>=b)return null;
+  const s=new Date(d);const[ah,am]=a.split(":").map(Number);s.setHours(ah,am,0,0);const e=new Date(d);const[bh,bm]=b.split(":").map(Number);e.setHours(bh,bm,0,0);return[s,e];}
+function schedule(){const now=new Date();const act=tasks.filter(t=>!t.done&&t.prog<5);
+  const start=new Date(Math.ceil(now.getTime()/18e5)*18e5);
+  const items=act.map(t=>{let L=listo(t);const due=new Date(t.due);const late=L<now;if(late)L=due;return{t,L,due,late,need:remaining(t)*2,got:0};}).sort((a,b)=>a.L-b.L);
+  const blocks=[],taken=new Set(),perDay={};const maxSlots=Math.round(cfg.max*2);
+  const horizon=items.length?Math.max(...items.map(i=>i.L.getTime())):0;
+  for(const it of items){for(let s=start.getTime();s<it.L.getTime()&&it.got<it.need;s+=18e5){if(taken.has(s))continue;const d=new Date(s);const w=windowFor(d);if(!w||d<w[0]||s+18e5>w[1].getTime())continue;
+      const dk=d.toDateString();if((perDay[dk]||0)>=maxSlots)continue;taken.add(s);perDay[dk]=(perDay[dk]||0)+1;it.got++;blocks.push({s,t:it.t,kind:"work"});}}
+  // impresión: un rato el día anterior a la entrega
+  for(const it of items){if(it.t.fmt==="digital")continue;const due=new Date(it.t.due);const pd=new Date(due);pd.setDate(pd.getDate()-1);
+    const w=windowFor(pd);let placed=false;if(w){for(let s=w[0].getTime();s+36e5<=w[1].getTime();s+=18e5){if(s<now.getTime()||taken.has(s)||taken.has(s+18e5))continue;taken.add(s);taken.add(s+18e5);blocks.push({s,t:it.t,kind:"print",len:2});placed=true;break;}}
+    if(!placed&&pd>now){const s=new Date(pd);s.setHours(12,0,0,0);blocks.push({s:s.getTime(),t:it.t,kind:"print",len:2,loose:true});}}
+  // entregas
+  act.forEach(t=>blocks.push({s:new Date(t.due).getTime(),t,kind:"due"}));
+  blocks.sort((a,b)=>a.s-b.s);
+  // unir bloques seguidos de la misma tarea
+  const merged=[];for(const b of blocks){const last=merged[merged.length-1];const len=b.len||1;
+    if(last&&b.kind==="work"&&last.kind==="work"&&last.t===b.t&&last.e===b.s){last.e+=18e5;continue;}
+    merged.push({...b,e:b.kind==="due"?b.s:b.s+len*18e5});}
+  const short=items.filter(i=>i.got<i.need).map(i=>({t:i.t,falta:(i.need-i.got)/2,late:i.late}));
+  return{merged,short,late:items.filter(i=>i.late).map(i=>i.t)};}
+
+function renderTasks(){fillMat();
+  const act=tasks.filter(t=>!t.done);
+  document.getElementById("tCount").textContent=`${act.filter(t=>t.prog<5).length} pendientes`;
+  const sorted=[...tasks].sort((a,b)=>(a.done-b.done)||(listo(a)-listo(b)));
+  document.getElementById("tlist").innerHTML=sorted.length?sorted.map(t=>{const[u,ul]=urgency(t);const L=listo(t),due=new Date(t.due);
+    return `<article class="task${t.done?" done":""}"><div class="th"><div><small>${esc(matName(t.mat))}</small><b>${esc(t.title)}</b></div><span class="urg u${t.done?4:u}">${t.done?"Entregada":ul}</span></div>
+    <div class="meta"><span>${FMT[t.fmt].n}</span><span>~${fmtH(t.hrs)} en total</span><span>te quedan ${fmtH(remaining(t))}</span>${t.pomos?`<span>${t.pomos} pomodoro${t.pomos>1?"s":""}</span>`:""}</div>
+    <div class="when">Entrega: <b>${fmtDay(due)} ${fmtHM(due)}</b> · Tenelo listo: <b>${fmtDay(L)} ${fmtHM(L)}</b> <span style="color:var(--muted)">(${FMT[t.fmt].why})</span></div>
+    <div class="tb"><div class="tears" role="group" aria-label="Progreso de ${esc(t.title)}">${tearsHTML(t.prog,`data-tp="${t.id}" data-n`)}</div>
+    <div style="display:flex;gap:12px"><button class="lnk" data-edit="${t.id}">Editar</button><button class="lnk" data-done="${t.id}">${t.done?"Volver a pendiente":"Ya la entregué"}</button><button class="lnk" data-del="${t.id}">Borrar</button></div></div></article>`;}).join("")
+    :`<div class="empty2">Todavía no cargaste tareas.<br>Empezá con la que tengas más cerca.</div>`;
+  const {merged,short,late}=schedule();
+  let h="";
+  short.forEach(x=>{h+=`<div class="alert"><b>${esc(x.t.title)}</b>: con tu tiempo libre no llegás. Te faltan ${fmtH(x.falta)}. Probá sumar horas por día o empezar antes.</div>`;});
+  late.forEach(t=>{if(!short.find(x=>x.t===t))h+=`<div class="alert"><b>${esc(t.title)}</b>: ya pasó el momento en que tenía que estar lista. Te organicé el tiempo que queda hasta la entrega.</div>`;});
+  const days={};merged.forEach(b=>{const k=new Date(b.s).toDateString();(days[k]=days[k]||[]).push(b);});
+  const today=new Date().toDateString(),tom=new Date(Date.now()+864e5).toDateString();
+  const keys=Object.keys(days).slice(0,14);
+  if(!keys.length)h+=`<div class="empty2">Cuando cargues tareas, acá aparece qué hacer cada día.</div>`;
+  keys.forEach(k=>{const d=new Date(k);h+=`<div class="cday"><h4>${k===today?"Hoy":k===tom?"Mañana":DN[d.getDay()]} · ${d.getDate()}/${d.getMonth()+1}</h4>`;
+    days[k].forEach(b=>{const s=new Date(b.s),e=new Date(b.e),m=esc(matName(b.t.mat));
+      if(b.kind==="work")h+=`<div class="blk"><span class="tm">${fmtHM(s)}–${fmtHM(e)}</span><div><b>${esc(b.t.title)}</b><small>${m} · ${fmtH((b.e-b.s)/36e5)}</small></div></div>`;
+      else if(b.kind==="print")h+=`<div class="blk print"><span class="tm">${b.loose?"En el día":fmtHM(s)+"–"+fmtHM(e)}</span><div><b>Imprimir: ${esc(b.t.title)}</b><small>${m} · llevalo listo para la entrega</small></div></div>`;
+      else h+=`<div class="blk due"><span class="tm">${fmtHM(s)}</span><div><b>Entrega: ${esc(b.t.title)}</b><small>${m} · ${FMT[b.t.fmt].n}</small></div></div>`;});
+    h+=`</div>`;});
+  document.getElementById("cron").innerHTML=h;
+  const tot=merged.filter(b=>b.kind==="work").reduce((a,b)=>a+(b.e-b.s),0)/36e5;
+  document.getElementById("cronInfo").textContent=tot?`${fmtH(tot)} organizadas`:"Sin tareas";
+  const nc=document.getElementById("navCount");const n=act.filter(t=>t.prog<5).length;nc.hidden=!n;nc.textContent=n;
+  ["wkF","wkT","saF","saT","suF","suT"].forEach(k=>{const el=document.getElementById("c"+k[0].toUpperCase()+k.slice(1));if(document.activeElement!==el)el.value=cfg[k];});
+  const cm=document.getElementById("cMax");if(document.activeElement!==cm)cm.value=cfg.max;
+}
+function saveTasks(){store(TK,tasks);renderTasks();}
+document.getElementById("tform").addEventListener("submit",e=>{e.preventDefault();
+  const t={id:editing||String(Date.now()),mat:document.getElementById("fMat").value,title:document.getElementById("fTit").value.trim()||"Tarea",hrs:Math.max(.5,+document.getElementById("fHrs").value||1),due:document.getElementById("fDue").value,fmt:fmtSel,prog:fTear,done:false,pomos:0};
+  if(!t.due){toast("Poné la fecha de entrega");return;}
+  if(editing){const o=tasks.find(x=>x.id===editing);Object.assign(o,{...t,done:o.done,pomos:o.pomos});toast("Tarea actualizada");}else{tasks.push(t);toast("Tarea agregada al cronograma");}
+  saveTasks();resetForm();});
+document.getElementById("fCancel").onclick=resetForm;
+["wkF","wkT","saF","saT","suF","suT"].forEach(k=>document.getElementById("c"+k[0].toUpperCase()+k.slice(1)).addEventListener("change",e=>{cfg[k]=e.target.value;store(CK,cfg);renderTasks();}));
+document.getElementById("cMax").addEventListener("change",e=>{cfg.max=Math.min(12,Math.max(1,+e.target.value||4));store(CK,cfg);renderTasks();});
+document.addEventListener("click",e=>{
+  const fm=e.target.closest("[data-fmt]");if(fm){fmtSel=fm.dataset.fmt;paintForm();return;}
+  const ft=e.target.closest("[data-ft]");if(ft){const n=+ft.dataset.ft;fTear=fTear===n?n-1:n;paintForm();return;}
+  const tp=e.target.closest("[data-tp]");if(tp){const t=tasks.find(x=>x.id===tp.dataset.tp);const n=+tp.dataset.n;t.prog=t.prog===n?n-1:n;saveTasks();if(t.prog===5){toast(`¡${t.title} terminado!`);confetti();}return;}
+  const ed=e.target.closest("[data-edit]");if(ed){const t=tasks.find(x=>x.id===ed.dataset.edit);editing=t.id;document.getElementById("fMat").value=t.mat;document.getElementById("fTit").value=t.title;document.getElementById("fHrs").value=t.hrs;document.getElementById("fDue").value=t.due;fmtSel=t.fmt;fTear=t.prog;paintForm();document.getElementById("fSubmit").textContent="Guardar cambios";document.getElementById("fCancel").hidden=false;document.getElementById("tform").scrollIntoView({behavior:"smooth"});document.getElementById("fTit").focus();return;}
+  const dn=e.target.closest("[data-done]");if(dn){const t=tasks.find(x=>x.id===dn.dataset.done);t.done=!t.done;if(t.done){t.prog=5;toast("¡Entregada!");confetti();}saveTasks();return;}
+  const dl=e.target.closest("[data-del]");if(dl){delId=dl.dataset.del;document.getElementById("dT").textContent=`¿Borrar "${tasks.find(x=>x.id===delId).title}"?`;dm.classList.add("open");document.getElementById("dNo").focus();return;}
+});
+let delId=null;const dm=document.getElementById("delModal");
+document.getElementById("dNo").onclick=()=>dm.classList.remove("open");
+document.getElementById("dYes").onclick=()=>{tasks=tasks.filter(x=>x.id!==delId);saveTasks();dm.classList.remove("open");toast("Tarea borrada");};
+document.getElementById("expBtn").onclick=async()=>{const code=btoa(unescape(encodeURIComponent(JSON.stringify({st:state.st,route:state.route,tasks,cfg,pomo:load(PK,{})}))));
+  try{await navigator.clipboard.writeText(code);toast("Código copiado: pegalo en el otro dispositivo");}catch(e){document.getElementById("impTxt").value=code;toast("Copiá el código del cuadro de texto");}};
+document.getElementById("impBtn").onclick=()=>{try{const d=JSON.parse(decodeURIComponent(escape(atob(document.getElementById("impTxt").value.trim()))));
+  if(d.st)state.st=Object.assign(initial(),d.st);if(d.route)state.route=d.route;if(d.tasks)tasks=d.tasks;if(d.cfg)cfg=Object.assign(cfg,d.cfg);if(d.pomo)store(PK,d.pomo);
+  save();store(TK,tasks);store(CK,cfg);render();renderTasks();document.getElementById("impTxt").value="";toast("¡Listo! Datos cargados");}catch(e){toast("Ese código no funciona. Copialo de nuevo.");}};
+
+/* ===== Modo foco ===== */
+const PM={foco:25,pausa:5,larga:15};
+let pm="foco",pLeft=PM.foco*60,pTimer=null,pEnd=0,actx=null;
+function pomoData(){const d=load(PK,{});const k=new Date().toDateString();if(d.day!==k){d.day=k;d.n=0;}return d;}
+function beep(){try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();[0,.25,.5].forEach(t=>{const o=actx.createOscillator(),g=actx.createGain();o.frequency.value=880;o.connect(g);g.connect(actx.destination);g.gain.setValueAtTime(.2,actx.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+t+.2);o.start(actx.currentTime+t);o.stop(actx.currentTime+t+.2);});}catch(e){}}
+function paintTimer(){const tot=PM[pm]*60;document.getElementById("pTime").textContent=`${pad(Math.floor(pLeft/60))}:${pad(pLeft%60)}`;
+  document.getElementById("pRing").style.strokeDashoffset=289*(1-pLeft/tot);
+  document.getElementById("pStart").textContent=pTimer?"Pausar":(pLeft<tot?"Seguir":"Empezar");
+  document.getElementById("pSub").textContent=pTimer?(pm==="foco"?"Concentrada":"Descansá"):(pLeft<tot?"En pausa":"Listo para arrancar");
+  document.querySelectorAll("#pModes [data-pm]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pm===pm));
+  if(view==="foco")document.title=pTimer?`${pad(Math.floor(pLeft/60))}:${pad(pLeft%60)} · Modo foco`:"Modo Carrera · Guada";}
+function renderFocus(){const sel=document.getElementById("pTask");const cur=sel.value;const act=tasks.filter(t=>!t.done&&t.prog<5).sort((a,b)=>listo(a)-listo(b));
+  sel.innerHTML=`<option value="">Sin tarea elegida</option>`+act.map(t=>`<option value="${t.id}">${esc(t.title)} · ${esc(matName(t.mat))}</option>`).join("");if(cur)sel.value=cur;else if(act[0])sel.value=act[0].id;
+  const d=pomoData();document.getElementById("pCount").textContent=d.n||0;document.getElementById("pTomatoes").innerHTML="<i></i>".repeat(Math.min(d.n||0,16));
+  const {merged}=schedule();const nx=merged.find(b=>b.kind==="work"&&b.e>Date.now());
+  document.getElementById("nowCard").innerHTML=act.length?`<h3>¿Qué hago ahora?</h3>${nx?`<div style="font-size:15px">Lo más urgente es <b>${esc(nx.t.title)}</b> (${esc(matName(nx.t.mat))}).</div><div style="font-size:13px">Tu próximo bloque: ${new Date(nx.s).toDateString()===new Date().toDateString()?"hoy":fmtDay(new Date(nx.s))} de ${fmtHM(new Date(nx.s))} a ${fmtHM(new Date(nx.e))}. Te quedan ${fmtH(remaining(nx.t))}, o sea unos ${Math.ceil(remaining(nx.t)*2)} pomodoros.</div>`:`<div>Tenés todo organizado. ¡Bien ahí!</div>`}<button class="bigbtn" style="justify-self:start;padding:9px 16px" id="goNow">Trabajar en esto</button>`
+    :`<h3>¿Qué hago ahora?</h3><div style="font-size:14px">No tenés tareas cargadas. Agregalas en <b>Tareas</b> y acá te digo por cuál empezar.</div>`;
+  const g=document.getElementById("goNow");if(g)g.onclick=()=>{if(nx)sel.value=nx.t.id;if(!pTimer)document.getElementById("pStart").click();};
+  paintTimer();}
+function tick(){pLeft=Math.max(0,Math.round((pEnd-Date.now())/1000));paintTimer();if(pLeft>0)return;
+  clearInterval(pTimer);pTimer=null;beep();
+  if(pm==="foco"){const d=pomoData();d.n=(d.n||0)+1;store(PK,d);const id=document.getElementById("pTask").value;const t=tasks.find(x=>x.id===id);if(t){t.pomos=(t.pomos||0)+1;store(TK,tasks);}
+    toast(t?`+1 pomodoro en ${t.title}`:"+1 pomodoro");confetti();pm=d.n%4===0?"larga":"pausa";}else{toast("¡A seguir!");pm="foco";}
+  pLeft=PM[pm]*60;renderFocus();}
+document.getElementById("pStart").onclick=()=>{if(pTimer){clearInterval(pTimer);pTimer=null;paintTimer();return;}
+  try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();}catch(e){}pEnd=Date.now()+pLeft*1000;pTimer=setInterval(tick,500);paintTimer();};
+document.getElementById("pReset").onclick=()=>{clearInterval(pTimer);pTimer=null;pLeft=PM[pm]*60;paintTimer();};
+document.getElementById("pModes").addEventListener("click",e=>{const b=e.target.closest("[data-pm]");if(!b)return;clearInterval(pTimer);pTimer=null;pm=b.dataset.pm;pLeft=PM[pm]*60;paintTimer();});
+
 function toast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),1700);}
 function confetti(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const cv=document.getElementById("fx"),x=cv.getContext("2d");cv.width=innerWidth;cv.height=innerHeight;
   const cs=["#f4d364","#f3b9d9","#a3ad68","#b8c7ee","#121212"];const P=Array.from({length:110},()=>({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*.4,vx:(Math.random()-.5)*3,vy:2+Math.random()*4,s:6+Math.random()*8,r:Math.random()*6,c:cs[Math.random()*cs.length|0]}));
@@ -458,8 +800,8 @@ document.addEventListener("click",e=>{
   if(d){state.day=+d.dataset.day;render();}
   if(y){const lvs=levels(D.planes[state.route]);state.lv=lvs.findIndex(x=>x.a===+y.dataset.year);render();}
 });
-document.getElementById("rA").onclick=()=>{state.route="A";save();history.replaceState(null,"","#normal");render();};
-document.getElementById("rB").onclick=()=>{state.route="B";save();history.replaceState(null,"","#condicional");render();};
+document.getElementById("rA").onclick=()=>{state.route="A";save();render();};
+document.getElementById("rB").onclick=()=>{state.route="B";save();render();};
 document.getElementById("prevLv").onclick=()=>{if(state.lv>0){state.lv--;render();}};
 document.getElementById("nextLv").onclick=()=>{state.lv++;render();};
 document.getElementById("toToday").onclick=()=>{const d=new Date().getDay();state.day=(d>=1&&d<=5)?d-1:0;render();};
@@ -470,11 +812,11 @@ wm.addEventListener("click",e=>{if(e.target===wm)wm.classList.remove("open");});
 document.getElementById("reset").onclick=()=>{rm.classList.add("open");document.getElementById("rNo").focus();};
 document.getElementById("rNo").onclick=()=>rm.classList.remove("open");
 document.getElementById("rYes").onclick=()=>{state.st=initial();save();rm.classList.remove("open");render();toast("Volviste a noviembre de 2026");};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){wm.classList.remove("open");rm.classList.remove("open");}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){wm.classList.remove("open");rm.classList.remove("open");document.getElementById("delModal").classList.remove("open");}});
 document.getElementById("themeBtn").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=dark?"light":"dark";try{localStorage.setItem(KEY+"-theme",r.dataset.theme)}catch(e){}};
 try{const t=localStorage.getItem(KEY+"-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}
-window.addEventListener("hashchange",()=>{if(location.hash==="#condicional")state.route="B";if(location.hash==="#normal")state.route="A";render();});
-render();
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(VIEWS.includes(h))setView(h);});
+render();resetForm();renderTasks();setView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"inicio");
 </script>
 </body>
 </html>
