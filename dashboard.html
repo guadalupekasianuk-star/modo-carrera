@@ -267,6 +267,48 @@ details.box[open] summary{margin-bottom:10px}
 .how{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:8px;font-size:14px;line-height:1.5}
 .how ol{margin-left:18px;display:grid;gap:4px}
 .stack{display:grid;gap:16px}
+/* Compromiso */
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ccard{border-radius:20px;padding:18px 20px;color:#121212;display:grid;gap:10px;align-content:start;position:relative;overflow:hidden}
+.ccard h3{font-family:var(--display);font-weight:500;font-size:21px}
+.ccard .big{font-family:var(--display);font-size:44px;font-weight:700;line-height:1;letter-spacing:-.02em}
+.ccard p{font-size:13.5px;line-height:1.45}
+.hbar{height:10px;border-radius:999px;background:rgb(18 18 18 / .15);overflow:hidden}
+.hbar i{display:block;height:100%;background:#121212;border-radius:999px;transition:width .4s}
+.dots{display:flex;gap:4px;flex-wrap:wrap}
+.dots i{width:14px;height:14px;border-radius:50%;background:rgb(18 18 18 / .15)}
+.dots i.on{background:#121212}
+.plantwrap{display:flex;gap:14px;align-items:center}
+.plantwrap svg{width:110px;height:120px;flex:none}
+.penl{display:grid;gap:4px;font-size:12.5px}
+.penl div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid rgb(18 18 18 / .12);padding-bottom:3px}
+.box2{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:12px}
+.box2 h3{font-family:var(--display);font-weight:500;font-size:21px}
+.box2 p,.box2 li{font-size:14px;line-height:1.5}
+.box2 ol{margin-left:20px;display:grid;gap:4px}
+.cform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cform label{display:grid;gap:4px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.cform input{font:inherit;font-size:15px;text-transform:none;letter-spacing:0;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:12px;padding:9px 11px;width:100%}
+.contract{background:var(--chip);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;font-style:italic}
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1f9d55;color:#fff;border-radius:999px;padding:11px 18px;font-weight:700;text-decoration:none;width:max-content;max-width:100%}
+.banner{background:#121212;color:#f6f0e2;border-radius:16px;padding:12px 14px;font-size:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.banner b{color:var(--pink)}
+.prev{white-space:pre-wrap;font-size:12.5px;background:var(--chip);border-radius:12px;padding:10px 12px;color:var(--muted)}
+.tabs2{display:flex;gap:6px;flex-wrap:wrap}
+.tabs2 button{border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;background:var(--chip)}
+.tabs2 button[aria-pressed="true"]{background:#121212;color:#f6f0e2}
+.gc{display:inline-block;margin-top:2px;font-size:11.5px;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.lockov{position:fixed;inset:0;z-index:60;background:rgb(18 18 18 / .97);display:grid;place-items:center;padding:18px;color:#f6f0e2}
+.lockov[hidden]{display:none}
+.lbox{max-width:420px;width:100%;display:grid;gap:14px;justify-items:center;text-align:center}
+.lbox h2{font-family:var(--display);font-size:clamp(26px,7vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.05;text-wrap:balance}
+.lbox p{font-size:15px;line-height:1.5;color:#cfc9bd}
+.lbox svg{width:120px;height:130px}
+.lbtns{display:grid;gap:10px;width:100%}
+.lbtns .bigbtn{background:var(--pink);color:#121212}
+.lbtns .drop{background:#f6f0e2;color:#121212;padding:11px 16px;font-size:14px}
+.lbtns .lnk{color:#cfc9bd}
+@media (max-width:820px){.cgrid,.cform{grid-template-columns:1fr}}
 @media (max-width:1180px){.app.wide{grid-template-columns:200px minmax(0,1fr)}}
 @media (max-width:820px){
   .app.wide{grid-template-columns:minmax(0,1fr)}
@@ -303,6 +345,7 @@ details.box[open] summary{margin-bottom:10px}
       <a href="#inicio" data-view="inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Inicio</a>
       <a href="#tareas" data-view="tareas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Tareas<span class="badge-n" id="navCount" hidden></span></a>
       <a href="#foco" data-view="foco"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Modo foco</a>
+      <a href="#compromiso" data-view="compromiso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-7.5z"/><path d="M5 21h14"/></svg>Compromiso<span class="badge-n" id="navStreak" hidden></span></a>
       <a href="/" id="gameLink" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15 12h.01M18 12h.01"/></svg>Modo juego</a>
     </nav>
     <div class="route">
@@ -435,6 +478,83 @@ details.box[open] summary{margin-bottom:10px}
     </section>
    </div>
 
+   <div class="view" id="v-compromiso" hidden style="display:grid;gap:20px">
+    <div>
+      <h1>Compromiso</h1>
+      <p class="lead">Para que atrasarte tenga consecuencias de verdad: una planta que se marchita, una racha que se rompe, plata que debés, alguien que te controla y un bloqueo que te frena en el celu.</p>
+    </div>
+    <div class="banner" id="repBanner" hidden></div>
+    <div class="cgrid">
+      <article class="ccard" style="background:var(--green)">
+        <h3 id="plantName">Tito, tu planta</h3>
+        <div class="plantwrap"><div id="plantSvg"></div><div style="display:grid;gap:8px"><p id="plantMsg"></p><div class="hbar" aria-hidden="true"><i id="plantBar"></i></div><small id="plantPct" style="font-size:12px"></small></div></div>
+      </article>
+      <article class="ccard" style="background:var(--yellow)">
+        <h3>Racha</h3>
+        <div><span class="big" id="stkNum">0</span> <b id="stkLbl">días seguidos</b></div>
+        <div class="dots" id="stkDots" aria-hidden="true"></div>
+        <p>Cada día que avanzás algo (una lágrima, un pomodoro o una entrega) suma un día. Si un día no hacés nada, la racha vuelve a 0.</p>
+      </article>
+      <article class="ccard" style="background:var(--pink)">
+        <h3>Pozo de multas</h3>
+        <div class="big" id="pozoNum">$0</div>
+        <p id="pozoTxt"></p>
+        <div class="penl" id="penList"></div>
+        <button class="drop" id="payBtn" style="justify-self:start">Ya pagué el pozo</button>
+      </article>
+      <article class="ccard" style="background:var(--blue)">
+        <h3>Lo que te cuesta atrasarte</h3>
+        <div class="big" id="costNum">—</div>
+        <p id="costTxt"></p>
+        <p id="countTxt" style="font-weight:600"></p>
+      </article>
+    </div>
+
+    <section class="box2">
+      <h3>Tu contrato</h3>
+      <div class="cform">
+        <label for="xTest">Testigo (quién te controla)<input id="xTest" placeholder="Ej.: Mica"></label>
+        <label for="xTel">WhatsApp del testigo<input id="xTel" inputmode="tel" placeholder="Ej.: 5493815551234"></label>
+        <label for="xMul">Multa por cada tarea atrasada ($)<input id="xMul" type="number" min="0" step="500"></label>
+        <label for="xPre">Premio si cumplís todo el mes<input id="xPre" placeholder="Ej.: un helado de Mica"></label>
+        <label for="xCuo">Cuota mensual de la facu ($)<input id="xCuo" type="number" min="0" step="1000"></label>
+        <label for="xPla">Nombre de tu planta<input id="xPla" placeholder="Tito"></label>
+      </div>
+      <div class="contract" id="contract"></div>
+    </section>
+
+    <section class="box2">
+      <h3>Reporte para tu testigo</h3>
+      <p>Mandáselo todos los domingos. Si te atrasaste, se va a enterar, y también de cuánto le debés.</p>
+      <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener">Mandar reporte por WhatsApp</a>
+      <div class="prev" id="repPrev"></div>
+    </section>
+
+    <section class="box2">
+      <h3>Alarmas en tu calendario</h3>
+      <p>Descargá tu cronograma y abrilo en el celu: cada bloque de trabajo, cada impresión y cada entrega te va a sonar en el calendario. Volvé a descargarlo cuando cargues tareas nuevas. En el cronograma también tenés un link "+ Google Calendar" en cada bloque.</p>
+      <button class="bigbtn" id="icsBtn" style="justify-self:start;padding:11px 18px">Descargar alarmas (.ics)</button>
+    </section>
+
+    <section class="box2">
+      <h3>Modo bloqueo en el celu</h3>
+      <p>Si tenés una tarea atrasada, la página se bloquea hasta que avances, hagas un pomodoro o te rindas (y sumás multa). Para que te frene <b>cada vez que abrís Instagram o TikTok</b>, conectalo con tu celu:</p>
+      <div class="tabs2" role="group" aria-label="Tipo de celular"><button data-os="ios" aria-pressed="true">iPhone</button><button data-os="and" aria-pressed="false">Android</button></div>
+      <ol id="osIos">
+        <li>Abrí la app <b>Atajos</b> → pestaña <b>Automatización</b> → <b>+</b> → <b>App</b>.</li>
+        <li>Elegí Instagram, TikTok (las que te distraigan) y marcá <b>Se abre</b>. Elegí <b>Ejecutar inmediatamente</b>.</li>
+        <li>Agregá la acción <b>Abrir URL</b> y pegá: <b>modo-carrera.vercel.app/dashboard#bloqueo</b></li>
+        <li>Listo: cada vez que abras esas apps, primero te aparece tu bloqueo con lo que tenés pendiente.</li>
+      </ol>
+      <ol id="osAnd" hidden>
+        <li>Configuración → <b>Bienestar digital</b> → <b>Panel</b> → elegí Instagram/TikTok → <b>Temporizador de la app</b> (ej. 30 min por día). Cuando se acaba, la app se bloquea hasta mañana.</li>
+        <li>Para que se abra tu bloqueo al entrar a esas apps, instalá una app de automatización (por ejemplo MacroDroid) y creá: "Cuando se abre Instagram → Abrir sitio web <b>modo-carrera.vercel.app/dashboard#bloqueo</b>".</li>
+        <li>Agregá la página a tu pantalla de inicio: en Chrome, menú ⋮ → <b>Agregar a la pantalla principal</b>.</li>
+      </ol>
+      <button class="drop" id="tryLock" style="justify-self:start">Probar el modo bloqueo</button>
+    </section>
+   </div>
+
    <div class="view" id="v-foco" hidden style="display:grid;gap:20px">
     <div>
       <h1>Modo foco</h1>
@@ -506,6 +626,12 @@ details.box[open] summary{margin-bottom:10px}
   <h3 id="dT">¿Borrar esta tarea?</h3>
   <p class="lead">Se saca de la lista y del cronograma.</p>
   <div class="btnrow"><button class="drop" id="dNo" style="background:var(--chip);color:var(--ink)">Cancelar</button><button class="drop" id="dYes">Sí, borrar</button></div>
+</div></div>
+<div class="lockov" id="lock" hidden role="dialog" aria-modal="true" aria-labelledby="lkT"><div class="lbox">
+  <div id="lkPlant"></div>
+  <h2 id="lkT"></h2>
+  <p id="lkTxt"></p>
+  <div class="lbtns"><button class="bigbtn" id="lkPomo">Hacer un pomodoro ahora</button><button class="drop" id="lkTear">Ya avancé: sumar una lágrima</button><button class="lnk" id="lkGive"></button></div>
 </div></div>
 <div class="toast" id="toast" role="status"></div>
 <canvas id="fx" aria-hidden="true"></canvas>
@@ -633,14 +759,14 @@ function renderWeek(plan,lv,evs,off){
 
 
 /* ===== Vistas ===== */
-const VIEWS=["inicio","tareas","foco"];
+const VIEWS=["inicio","tareas","foco","compromiso"];
 let view="inicio";
 function setView(v,push){if(!VIEWS.includes(v))v="inicio";view=v;
   VIEWS.forEach(x=>{const el=document.getElementById("v-"+x);el.hidden=x!==v;});
   document.querySelector(".app").classList.toggle("wide",v!=="inicio");
   document.querySelectorAll(".navg [data-view]").forEach(a=>a.classList.toggle("act",a.dataset.view===v));
   if(push)history.replaceState(null,"","#"+v);
-  if(v==="tareas")renderTasks();if(v==="foco")renderFocus();window.scrollTo(0,0);}
+  if(v==="tareas")renderTasks();if(v==="foco")renderFocus();if(v==="compromiso")renderComp();window.scrollTo(0,0);}
 document.querySelectorAll(".navg [data-view]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();setView(a.dataset.view,true);}));
 if(/vercel\.app$/.test(location.hostname)){const g=document.getElementById("gameLink");g.hidden=false;}
 
@@ -721,7 +847,7 @@ function renderTasks(){fillMat();
   if(!keys.length)h+=`<div class="empty2">Cuando cargues tareas, acá aparece qué hacer cada día.</div>`;
   keys.forEach(k=>{const d=new Date(k);h+=`<div class="cday"><h4>${k===today?"Hoy":k===tom?"Mañana":DN[d.getDay()]} · ${d.getDate()}/${d.getMonth()+1}</h4>`;
     days[k].forEach(b=>{const s=new Date(b.s),e=new Date(b.e),m=esc(matName(b.t.mat));
-      if(b.kind==="work")h+=`<div class="blk"><span class="tm">${fmtHM(s)}–${fmtHM(e)}</span><div><b>${esc(b.t.title)}</b><small>${m} · ${fmtH((b.e-b.s)/36e5)}</small></div></div>`;
+      if(b.kind==="work")h+=`<div class="blk"><span class="tm">${fmtHM(s)}–${fmtHM(e)}</span><div><b>${esc(b.t.title)}</b><small>${m} · ${fmtH((b.e-b.s)/36e5)}${gcal(b)}</small></div></div>`;
       else if(b.kind==="print")h+=`<div class="blk print"><span class="tm">${b.loose?"En el día":fmtHM(s)+"–"+fmtHM(e)}</span><div><b>Imprimir: ${esc(b.t.title)}</b><small>${m} · llevalo listo para la entrega</small></div></div>`;
       else h+=`<div class="blk due"><span class="tm">${fmtHM(s)}</span><div><b>Entrega: ${esc(b.t.title)}</b><small>${m} · ${FMT[b.t.fmt].n}</small></div></div>`;});
     h+=`</div>`;});
@@ -732,7 +858,7 @@ function renderTasks(){fillMat();
   ["wkF","wkT","saF","saT","suF","suT"].forEach(k=>{const el=document.getElementById("c"+k[0].toUpperCase()+k.slice(1));if(document.activeElement!==el)el.value=cfg[k];});
   const cm=document.getElementById("cMax");if(document.activeElement!==cm)cm.value=cfg.max;
 }
-function saveTasks(){store(TK,tasks);renderTasks();}
+function saveTasks(){store(TK,tasks);logAct();renderTasks();renderComp();}
 document.getElementById("tform").addEventListener("submit",e=>{e.preventDefault();
   const t={id:editing||String(Date.now()),mat:document.getElementById("fMat").value,title:document.getElementById("fTit").value.trim()||"Tarea",hrs:Math.max(.5,+document.getElementById("fHrs").value||1),due:document.getElementById("fDue").value,fmt:fmtSel,prog:fTear,done:false,pomos:0};
   if(!t.due){toast("Poné la fecha de entrega");return;}
@@ -779,7 +905,7 @@ function renderFocus(){const sel=document.getElementById("pTask");const cur=sel.
   paintTimer();}
 function tick(){pLeft=Math.max(0,Math.round((pEnd-Date.now())/1000));paintTimer();if(pLeft>0)return;
   clearInterval(pTimer);pTimer=null;beep();
-  if(pm==="foco"){const d=pomoData();d.n=(d.n||0)+1;store(PK,d);const id=document.getElementById("pTask").value;const t=tasks.find(x=>x.id===id);if(t){t.pomos=(t.pomos||0)+1;store(TK,tasks);}
+  if(pm==="foco"){const d=pomoData();d.n=(d.n||0)+1;store(PK,d);logAct();const id=document.getElementById("pTask").value;const t=tasks.find(x=>x.id===id);if(t){t.pomos=(t.pomos||0)+1;store(TK,tasks);}
     toast(t?`+1 pomodoro en ${t.title}`:"+1 pomodoro");confetti();pm=d.n%4===0?"larga":"pausa";}else{toast("¡A seguir!");pm="foco";}
   pLeft=PM[pm]*60;renderFocus();}
 document.getElementById("pStart").onclick=()=>{if(pTimer){clearInterval(pTimer);pTimer=null;paintTimer();return;}
@@ -815,8 +941,73 @@ document.getElementById("rYes").onclick=()=>{state.st=initial();save();rm.classL
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){wm.classList.remove("open");rm.classList.remove("open");document.getElementById("delModal").classList.remove("open");}});
 document.getElementById("themeBtn").onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=dark?"light":"dark";try{localStorage.setItem(KEY+"-theme",r.dataset.theme)}catch(e){}};
 try{const t=localStorage.getItem(KEY+"-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}
-window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(VIEWS.includes(h))setView(h);});
-render();resetForm();renderTasks();setView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"inicio");
+/* ===== Compromiso ===== */
+const XK=KEY+"-comp";
+let comp=Object.assign({testigo:"",tel:"",multa:2000,premio:"",cuota:0,pagado:0,log:{},pen:[],lastReport:0,plant:"Tito"},load(XK,{}));
+const saveComp=()=>store(XK,comp);
+const dkey=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+function logAct(){comp.log[dkey(new Date())]=true;saveComp();}
+function streak(){let n=0;const d=new Date();if(!comp.log[dkey(d)])d.setDate(d.getDate()-1);while(comp.log[dkey(d)]){n++;d.setDate(d.getDate()-1);}return n;}
+function lateTasks(){const now=Date.now();return tasks.filter(t=>!t.done&&t.prog<5&&listo(t).getTime()<now);}
+function checkPen(){let ch=false;lateTasks().forEach(t=>{const id="late-"+t.id;if(!comp.pen.find(p=>p.id===id)){comp.pen.push({id,f:Date.now(),m:+comp.multa||0,why:`Atraso: ${t.title}`});ch=true;}});if(ch)saveComp();}
+function pozo(){return Math.max(0,comp.pen.reduce((a,p)=>a+p.m,0)-(+comp.pagado||0));}
+const money=n=>"$"+Math.max(0,Math.round(n)).toLocaleString("es-AR");
+function health(){const L=lateTasks().length,s=streak();let h=100-L*40;if(s===0&&Object.keys(comp.log).length)h-=20;if(s>=3)h+=10;return Math.max(0,Math.min(100,h));}
+function plantSVG(h){const leaf=h>=70?"#4f8a2f":h>=40?"#8a9a3f":h>=15?"#b8913a":"#7a5a3a";const dr=(100-h)*.55;
+  const lf=(x,y,r,s)=>`<path d="M${x} ${y}c${-14*s} -4 ${-24*s} -16 ${-26*s} -30c${14*s} 0 ${26*s} 12 ${26*s} 30z" fill="${leaf}" transform="rotate(${r*s} ${x} ${y})"/>`;
+  return `<svg viewBox="0 0 110 130" aria-hidden="true"><path d="M30 92h50l-6 34H36z" fill="#c4683e"/><rect x="26" y="86" width="58" height="10" rx="3" fill="#a9532f"/><path d="M55 88C55 70 ${55+dr*.3} 55 ${55+dr*.5} 40" stroke="${leaf}" stroke-width="4" fill="none" stroke-linecap="round"/>${lf(55,70,dr*.6,1)}${lf(56,64,dr*.6,-1)}${lf(55+dr*.4,46,dr,1)}${lf(56+dr*.4,44,dr,-1)}${h<15?'<path d="M70 108l4 6M78 104l3 7" stroke="#7a5a3a" stroke-width="2"/>':""}</svg>`;}
+function plantMsg(h,n){return h>=80?`¡${n} está feliz! Seguí así.`:h>=50?`${n} tiene sed: avanzá algo hoy.`:h>=20?`${n} se está marchitando: tenés tareas atrasadas.`:`${n} está en terapia intensiva. Rescatalo con un pomodoro.`;}
+function reportText(){const act=tasks.filter(t=>!t.done&&t.prog<5).sort((a,b)=>listo(a)-listo(b));const L=lateTasks();
+  return `📚 Reporte de Guada (${fmtDay(new Date())})\n✅ Tareas pendientes: ${act.length}\n⚠️ Atrasadas: ${L.length}${L.length?" ("+L.map(t=>t.title).join(", ")+")":""}\n🔥 Racha: ${streak()} días\n💸 Pozo de multas: ${money(pozo())}\n📅 Próximas entregas: ${act.slice(0,3).map(t=>`${t.title} (${fmtDay(new Date(t.due))})`).join(", ")||"ninguna"}\n\nSi me atraso, te debo lo del pozo. ¡Controlame!`;}
+const icsDT=d=>`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+function gcal(b){const s=new Date(b.s),e=new Date(b.e);const u=`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent((b.kind==="print"?"Imprimir: ":"")+b.t.title)}&dates=${icsDT(s)}/${icsDT(e)}&details=${encodeURIComponent(matName(b.t.mat)+" · Modo Carrera")}`;return `<br><a class="gc" href="${u}" target="_blank" rel="noopener">+ Google Calendar</a>`;}
+function downloadICS(){const {merged}=schedule();if(!merged.length){toast("Primero cargá tareas");return;}
+  const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Modo Carrera//ES","CALSCALE:GREGORIAN"];
+  merged.forEach((b,i)=>{const s=new Date(b.s),e=new Date(b.kind==="due"?b.s+18e5:b.e);const title=b.kind==="work"?`Trabajar: ${b.t.title}`:b.kind==="print"?`Imprimir: ${b.t.title}`:`ENTREGA: ${b.t.title}`;
+    L.push("BEGIN:VEVENT",`UID:mc-${b.t.id}-${b.kind}-${b.s}@modo-carrera`,`DTSTAMP:${icsDT(new Date())}`,`DTSTART:${icsDT(s)}`,`DTEND:${icsDT(e)}`,`SUMMARY:${title.replace(/[,;]/g," ")}`,`DESCRIPTION:${matName(b.t.mat).replace(/[,;]/g," ")}`);
+    const al=b.kind==="due"?["-PT24H","-PT2H"]:["-PT10M"];al.forEach(a=>L.push("BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${title.replace(/[,;]/g," ")}`,`TRIGGER:${a}`,"END:VALARM"));L.push("END:VEVENT");});
+  L.push("END:VCALENDAR");const blob=new Blob([L.join("\r\n")],{type:"text/calendar"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="cronograma-guada.ics";document.body.appendChild(a);a.click();a.remove();toast("Abrí el archivo para sumarlo a tu calendario");}
+const GRAD={A:new Date(2029,11,15),B:new Date(2028,11,15)};
+function renderComp(){checkPen();const h=health(),s=streak(),pn=comp.plant||"Tito";
+  document.getElementById("plantName").textContent=`${pn}, tu planta`;document.getElementById("plantSvg").innerHTML=plantSVG(h);document.getElementById("plantMsg").textContent=plantMsg(h,pn);document.getElementById("plantBar").style.width=h+"%";document.getElementById("plantPct").textContent=`Salud: ${h}%`;
+  document.getElementById("stkNum").textContent=s;document.getElementById("stkLbl").textContent=s===1?"día seguido":"días seguidos";
+  let dots="";for(let i=13;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);dots+=`<i class="${comp.log[dkey(d)]?"on":""}"></i>`;}document.getElementById("stkDots").innerHTML=dots;
+  const P=pozo();document.getElementById("pozoNum").textContent=money(P);
+  document.getElementById("pozoTxt").textContent=`${money(+comp.multa||0)} por cada tarea que no esté lista a tiempo${comp.testigo?`, y se la pagás a ${comp.testigo}`:""}. ${comp.premio?`Si cumplís todo el mes: ${comp.premio}.`:""}`;
+  document.getElementById("penList").innerHTML=comp.pen.slice(-4).reverse().map(p=>`<div><span>${esc(p.why)}</span><b>${money(p.m)}</b></div>`).join("");
+  document.getElementById("payBtn").hidden=!P;
+  const cu=+comp.cuota||0;document.getElementById("costNum").textContent=cu?money(cu*12):"—";
+  document.getElementById("costTxt").textContent=cu?`Es lo que pagás de más si terminás en la ruta normal (fin de 2029) en vez de la condicional (fin de 2028): 12 cuotas extra. Cada cuatrimestre que se te corra son ${money(cu*6)} más.`:"Poné tu cuota mensual en el contrato y te muestro cuánta plata te cuesta cada cuatrimestre de atraso.";
+  const days=Math.ceil((GRAD[state.route]-Date.now())/864e5);document.getElementById("countTxt").textContent=`Faltan ${days.toLocaleString("es-AR")} días para que te recibas (${state.route==="A"?"ruta normal":"ruta condicional"}).`;
+  [["xTest","testigo"],["xTel","tel"],["xMul","multa"],["xPre","premio"],["xCuo","cuota"],["xPla","plant"]].forEach(([id,k])=>{const el=document.getElementById(id);if(document.activeElement!==el)el.value=comp[k]||"";});
+  document.getElementById("contract").textContent=`Yo, Guadalupe, me comprometo a tener cada trabajo listo a tiempo. Por cada tarea atrasada pongo ${money(+comp.multa||0)} en el pozo${comp.testigo?` y se lo pago a ${comp.testigo}, que me controla`:""}.${comp.premio?` Si cumplo todo el mes, me gano: ${comp.premio}.`:""}`;
+  const txt=reportText();document.getElementById("repPrev").textContent=txt;const tel=(comp.tel||"").replace(/\D/g,"");document.getElementById("waBtn").href=`https://wa.me/${tel}?text=${encodeURIComponent(txt)}`;
+  const due=new Date().getDay()===0||Date.now()-(comp.lastReport||0)>7*864e5;const bn=document.getElementById("repBanner");bn.hidden=!due;bn.innerHTML=`<span><b>Te toca:</b> mandale el reporte semanal a ${esc(comp.testigo||"tu testigo")}.</span><a class="wa" href="${document.getElementById("waBtn").href}" target="_blank" rel="noopener" data-rep>Mandar ahora</a>`;
+  const ns=document.getElementById("navStreak");ns.hidden=!s;ns.textContent=s;}
+[["xTest","testigo"],["xTel","tel"],["xMul","multa"],["xPre","premio"],["xCuo","cuota"],["xPla","plant"]].forEach(([id,k])=>document.getElementById(id).addEventListener("change",e=>{comp[k]=e.target.type==="number"?+e.target.value:e.target.value.trim();saveComp();renderComp();}));
+document.getElementById("payBtn").onclick=()=>{comp.pagado=comp.pen.reduce((a,p)=>a+p.m,0);saveComp();renderComp();toast("Pozo saldado. ¡Que no se repita!");};
+document.getElementById("icsBtn").onclick=downloadICS;
+document.addEventListener("click",e=>{if(e.target.closest("#waBtn,[data-rep]")){comp.lastReport=Date.now();saveComp();setTimeout(renderComp,300);}
+  const o=e.target.closest("[data-os]");if(o){document.querySelectorAll("[data-os]").forEach(b=>b.setAttribute("aria-pressed",b===o));document.getElementById("osIos").hidden=o.dataset.os!=="ios";document.getElementById("osAnd").hidden=o.dataset.os!=="and";}});
+/* Bloqueo */
+const SNZ=KEY+"-snooze";let lockForce=false;
+function showLock(force){lockForce=!!force;const L=lateTasks().sort((a,b)=>listo(a)-listo(b));let snz=0;try{snz=+sessionStorage.getItem(SNZ)||0}catch(e){}
+  const el=document.getElementById("lock");if((!L.length&&!force)||(!force&&Date.now()<snz)){el.hidden=true;return;}
+  const h=health();document.getElementById("lkPlant").innerHTML=plantSVG(h);
+  if(L.length){const t=L[0];document.getElementById("lkT").textContent=`Tenés ${L.length} tarea${L.length>1?"s":""} atrasada${L.length>1?"s":""}`;
+    document.getElementById("lkTxt").textContent=`"${t.title}" tenía que estar lista el ${fmtDay(listo(t))} a las ${fmtHM(listo(t))}. Esto no se va hasta que avances. Si te rendís, sumás ${money(+comp.multa||0)} al pozo${comp.testigo?` que le debés a ${comp.testigo}`:""}.`;
+    document.getElementById("lkTear").hidden=false;document.getElementById("lkGive").textContent=`Me rindo por hoy (+${money(+comp.multa||0)} al pozo)`;}
+  else{const {merged}=schedule();const nx=merged.find(b=>b.kind==="work"&&b.e>Date.now());document.getElementById("lkT").textContent="¿Seguro que querés distraerte?";
+    document.getElementById("lkTxt").textContent=nx?`Tu próximo bloque es "${nx.t.title}", ${new Date(nx.s).toDateString()===new Date().toDateString()?"hoy":fmtDay(new Date(nx.s))} a las ${fmtHM(new Date(nx.s))}. Tu racha va en ${streak()} días.`:`Tu racha va en ${streak()} días. No la cortes.`;
+    document.getElementById("lkTear").hidden=true;document.getElementById("lkGive").textContent="Solo 10 minutos";}
+  el.hidden=false;document.getElementById("lkPomo").focus();}
+function snooze(ms){try{sessionStorage.setItem(SNZ,String(Date.now()+ms))}catch(e){}document.getElementById("lock").hidden=true;if(location.hash==="#bloqueo")history.replaceState(null,"","#inicio");}
+document.getElementById("lkPomo").onclick=()=>{const L=lateTasks();snooze(30*6e4);setView("foco",true);const sel=document.getElementById("pTask");if(L[0])sel.value=L[0].id;if(!pTimer)document.getElementById("pStart").click();};
+document.getElementById("lkTear").onclick=()=>{const L=lateTasks().sort((a,b)=>listo(a)-listo(b));if(!L[0])return;L[0].prog=Math.min(5,L[0].prog+1);saveTasks();snooze(3*36e5);toast(`+1 lágrima en ${L[0].title}`);};
+document.getElementById("lkGive").onclick=()=>{const L=lateTasks();if(L.length){comp.pen.push({id:"give-"+Date.now(),f:Date.now(),m:+comp.multa||0,why:`Me rendí: ${L[0].title}`});saveComp();const m=new Date();m.setHours(23,59,0,0);snooze(m-Date.now());toast(`+${money(+comp.multa||0)} al pozo`);}else snooze(10*6e4);renderComp();};
+document.getElementById("tryLock").onclick=()=>showLock(true);
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(h==="bloqueo"){showLock(true);return;}if(VIEWS.includes(h))setView(h);});
+render();resetForm();renderTasks();renderComp();setView(VIEWS.includes(location.hash.slice(1))?location.hash.slice(1):"inicio");showLock(location.hash==="#bloqueo");
 </script>
 </body>
 </html>
